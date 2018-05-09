@@ -1,5 +1,16 @@
 page-menu-principal {
+
   .menu-button {
     margin-top: 2.5em;
+    width: 120px;
   }
+
+  ion-footer > ion-toolbar > div.toolbar-background.toolbar-background-md {
+    background-color: rgba(0, 0, 0, 0.750);
+  }
+
+  ion-footer > ion-toolbar > div.toolbar-content.toolbar-content-md > p {
+    color: #ffff;
+  }
+
 }
