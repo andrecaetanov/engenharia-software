@@ -1,19 +1,10 @@
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>MenuPrincipal</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
 <ion-content padding>
+  <img class="logo" src="assets/imgs/logo.png">
 
   <ion-grid>
-
     <ion-row>
       <ion-col class="col-12" text-center>
-        <button class = "menu-button" ion-button color="secondary">Jogar</button>
+        <button class = "menu-button" ion-button color="secondary" (click)="acessarPagina()" >Jogar</button>
       </ion-col>
     </ion-row>
 
@@ -40,9 +31,7 @@
         <button class = "menu-button" ion-button color="danger">Sair</button>
       </ion-col>
     </ion-row>
-
   </ion-grid>
-
 </ion-content>
 
 <ion-footer>

@@ -1,3 +1,4 @@
+import { PerguntaPage } from './../pages/pergunta/pergunta';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -10,7 +11,8 @@ import { MenuPrincipalPage } from '../pages/menu-principal/menu-principal';
 @NgModule({
   declarations: [
     MyApp,
-    MenuPrincipalPage
+    MenuPrincipalPage,
+    PerguntaPage
   ],
   imports: [
     BrowserModule,
@@ -19,7 +21,8 @@ import { MenuPrincipalPage } from '../pages/menu-principal/menu-principal';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    MenuPrincipalPage
+    MenuPrincipalPage,
+    PerguntaPage
   ],
   providers: [
     StatusBar,
