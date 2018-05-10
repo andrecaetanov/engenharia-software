@@ -1,3 +1,4 @@
+import { MenuPrincipalPage } from './../menu-principal/menu-principal';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -20,6 +21,10 @@ export class PerguntaPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PerguntaPage');
+  }
+
+  retornarParaMenu() {
+    this.navCtrl.push(MenuPrincipalPage);
   }
 
 }
