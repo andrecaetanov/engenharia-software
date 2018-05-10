@@ -1,41 +1,10 @@
 <ion-content padding>
   <img class="logo" src="assets/imgs/logo.png">
-
-  <ion-grid>
-    <ion-row>
-      <ion-col class="col-12" text-center>
-        <button class = "menu-button" ion-button color="secondary" (click)="acessarPagina()" >Jogar</button>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col class="col-12" text-center>
-        <button class = "menu-button" ion-button color="dark">Instruções</button>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col class="col-12" text-center>
-        <button class = "menu-button" ion-button color="dark">Pontuações</button>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col class="col-12" text-center>
-        <button class = "menu-button" ion-button color="dark">Opções</button>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col class="col-12" text-center>
-        <button class = "menu-button" ion-button color="danger">Sair</button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <div class="botoes">
+    <button class = "botao-menu" ion-button full color="secondary" (click)="acessarPagina()" >Jogar</button>
+    <button class = "botao-menu" ion-button full color="dark">Instruções</button>
+    <button class = "botao-menu" ion-button full color="dark">Pontuações</button>
+    <button class = "botao-menu" ion-button full color="dark">Opções</button>
+    <button class = "botao-menu" ion-button full color="danger">Sair</button>
+  </div>
 </ion-content>
-
-<ion-footer>
-  <ion-toolbar text-center>
-    <p>Copyright &copy; Todos os direitos reservados.</p>
-  </ion-toolbar>
-</ion-footer>

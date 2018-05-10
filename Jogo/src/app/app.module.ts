@@ -13,7 +13,8 @@ import { SelecionarDificuldadePage } from '../pages/selecionar-dificuldade/selec
   declarations: [
     MyApp,
     MenuPrincipalPage,
-    PerguntaPage
+    PerguntaPage,
+    SelecionarDificuldadePage
   ],
   imports: [
     BrowserModule,
@@ -23,7 +24,8 @@ import { SelecionarDificuldadePage } from '../pages/selecionar-dificuldade/selec
   entryComponents: [
     MyApp,
     MenuPrincipalPage,
-    PerguntaPage
+    PerguntaPage,
+    SelecionarDificuldadePage
   ],
   providers: [
     StatusBar,

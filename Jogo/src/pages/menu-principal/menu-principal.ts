@@ -18,6 +18,6 @@ export class MenuPrincipalPage {
   }
 
   acessarPagina() {
-    this.navCtrl.push(PerguntaPage);
+    this.navCtrl.push(SelecionarDificuldadePage);
   }
 }
