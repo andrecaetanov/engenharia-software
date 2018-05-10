@@ -1,6 +1,7 @@
 import { PerguntaPage } from './../pergunta/pergunta';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SelecionarDificuldadePage } from '../selecionar-dificuldade/selecionar-dificuldade';
 
 @IonicPage()
 @Component({
@@ -12,11 +13,11 @@ export class MenuPrincipalPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MenuPrincipalPage');
+  acessarPaginaSelecionarDificuldade() {
+    this.navCtrl.push(SelecionarDificuldadePage);
   }
 
   acessarPagina() {
-    this.navCtrl.push(PerguntaPage);
+    this.navCtrl.push(SelecionarDificuldadePage);
   }
 }
