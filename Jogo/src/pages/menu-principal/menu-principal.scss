@@ -1,0 +1,19 @@
+page-menu-principal {
+  .menu-button {
+    width: 120px;
+  }
+
+  ion-footer > ion-toolbar > div.toolbar-background.toolbar-background-md {
+    background-color: rgba(0, 0, 0, 0.750);
+  }
+
+  ion-footer > ion-toolbar > div.toolbar-content.toolbar-content-md > p {
+    color: #ffff;
+  }
+
+  .logo {
+    width: 200px;
+    height: 200px;
+    margin-left: calc(50% - 100px);
+  }
+}

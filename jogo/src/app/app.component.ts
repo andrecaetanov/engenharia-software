@@ -1,14 +1,14 @@
-import { PerguntaPage } from './../pages/pergunta/pergunta';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { MenuPrincipalPage } from '../pages/menu-principal/menu-principal';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = PerguntaPage;
+  rootPage:any = MenuPrincipalPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
