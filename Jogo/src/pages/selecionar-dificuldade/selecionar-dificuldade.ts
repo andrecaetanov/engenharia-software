@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PerguntaPage } from '../pergunta/pergunta';
 
 /**
  * Generated class for the SelecionarDificuldadePage page.
@@ -20,6 +21,10 @@ export class SelecionarDificuldadePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SelecionarDificuldadePage');
+  }
+
+  acessarPergunta() {
+    this.navCtrl.push(PerguntaPage);
   }
 
 }
