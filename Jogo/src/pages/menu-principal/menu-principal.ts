@@ -1,4 +1,3 @@
-import { PerguntaPage } from './../pergunta/pergunta';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SelecionarDificuldadePage } from '../selecionar-dificuldade/selecionar-dificuldade';
