@@ -1,3 +1,4 @@
+import { PerguntaPage } from './../pages/pergunta/pergunta';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -12,7 +13,7 @@ import { SelecionarDificuldadePage } from '../pages/selecionar-dificuldade/selec
   declarations: [
     MyApp,
     MenuPrincipalPage,
-    SelecionarDificuldadePage
+    PerguntaPage
   ],
   imports: [
     BrowserModule,
@@ -22,7 +23,7 @@ import { SelecionarDificuldadePage } from '../pages/selecionar-dificuldade/selec
   entryComponents: [
     MyApp,
     MenuPrincipalPage,
-    SelecionarDificuldadePage
+    PerguntaPage
   ],
   providers: [
     StatusBar,

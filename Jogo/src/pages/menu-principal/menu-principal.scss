@@ -1,7 +1,5 @@
 page-menu-principal {
-
   .menu-button {
-    margin-top: 2.5em;
     width: 120px;
   }
 
@@ -13,4 +11,9 @@ page-menu-principal {
     color: #ffff;
   }
 
+  .logo {
+    width: 200px;
+    height: 200px;
+    margin-left: calc(50% - 100px);
+  }
 }
