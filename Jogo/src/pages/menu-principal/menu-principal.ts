@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SelecionarDificuldadePage } from '../selecionar-dificuldade/selecionar-dificuldade';
+import { LoginPage } from '../login/login';
 
 @IonicPage()
 @Component({
@@ -18,5 +19,9 @@ export class MenuPrincipalPage {
 
   acessarPagina() {
     this.navCtrl.push(SelecionarDificuldadePage);
+  }
+
+  sair() {
+    this.navCtrl.setRoot(LoginPage);
   }
 }

@@ -10,18 +10,20 @@
         <ion-list inset class="no-border">
           <ion-item>
             <ion-label>E-mail</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" [(ngModel)]="usuario.email" class="form-input"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label>Senha</ion-label>
-            <ion-input type="password"></ion-input>
+            <ion-input type="password" [(ngModel)]="usuario.senha" class="form-input"></ion-input>
           </ion-item>
         </ion-list>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <button ion-button class="login-button" (click)="login()">Login</button>
+        <button ion-button class="login-button" (click)="login(usuario)">
+          Login
+        </button>
       </ion-col>
     </ion-row>
     <ion-row id="registrar-label">

@@ -30,21 +30,13 @@ export class RegistroPage {
       }
     }
     catch(e) {
-      this.exibirMensagemRegistroFalhou(e);
+      console.error(e);
     }
   }
 
   exibirMensagemRegistradoComSucesso() {
     this.toast.create({
       message: 'Você foi registrado com sucesso. Realize o login.',
-      duration: 3000,
-      position: 'bottom'
-    }).present();
-  }
-
-  exibirMensagemRegistroFalhou(e) {
-    this.toast.create({
-      message: 'Teste',
       duration: 3000,
       position: 'bottom'
     }).present();

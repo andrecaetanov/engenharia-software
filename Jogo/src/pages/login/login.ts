@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RegistroPage } from '../registro/registro';
-
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { AngularFireAuth } from 'angularfire2/auth';
+import { Usuario } from '../../models/usuario';
+import { MenuPrincipalPage } from '../menu-principal/menu-principal';
 
 @IonicPage()
 @Component({
@@ -16,19 +12,29 @@ import { RegistroPage } from '../registro/registro';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  usuario = {} as Usuario;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
-  }
-
-  login() {
-    console.log('Oooops.');
+  constructor(private angularFireAuth: AngularFireAuth,
+              public navCtrl: NavController, public navParams: NavParams) {
   }
 
   acessarRegistro() {
     this.navCtrl.push(RegistroPage);
   }
 
+  async login(usuario: Usuario) {
+    try {
+      var usuarioLogouComSucesso = this.angularFireAuth.auth.signInWithEmailAndPassword(
+        usuario.email,
+        usuario.senha
+      );
+
+      if(usuarioLogouComSucesso) {
+        this.navCtrl.setRoot(MenuPrincipalPage);
+      }
+    }
+    catch(e) {
+      console.error(e);
+    }
+  }
 }
