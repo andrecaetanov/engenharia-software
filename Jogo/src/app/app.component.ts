@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { MenuPrincipalPage } from '../pages/menu-principal/menu-principal';
 import { LoginPage } from '../pages/login/login';
 
 @Component({

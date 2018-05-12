@@ -1,5 +1,5 @@
-page-login {
-  ion-content {
+page-registro {
+ion-content {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -51,13 +51,9 @@ page-login {
     margin: 0;
   }
 
-  .login-button {
+  .register-button {
     width: 100%;
     font-size: 0.9em;
     background-color: #39acdc;
-  }
-
-  #registrar-label {
-    margin-top: 2em;
   }
 }
