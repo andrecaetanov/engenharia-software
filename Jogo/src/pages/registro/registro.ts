@@ -18,20 +18,15 @@ export class RegistroPage {
   }
 
   async registrar(usuario: Usuario) {
-    try {
-      var usuarioRegistrouComSucesso = this.angularFireAuth.auth.createUserWithEmailAndPassword(
+      this.angularFireAuth.auth.createUserWithEmailAndPassword(
         usuario.email,
         usuario.senha
-      );
-
-      if(usuarioRegistrouComSucesso) {
+      ).then((result) => {
         this.navCtrl.push(LoginPage);
         this.exibirMensagemRegistradoComSucesso();
-      }
-    }
-    catch(e) {
-      console.error(e);
-    }
+      }).catch(function(error) {
+        console.error(error);
+      });
   }
 
   exibirMensagemRegistradoComSucesso() {
