@@ -23,18 +23,13 @@ export class LoginPage {
   }
 
   async login(usuario: Usuario) {
-    try {
-      var usuarioLogouComSucesso = this.angularFireAuth.auth.signInWithEmailAndPassword(
+    this.angularFireAuth.auth.signInWithEmailAndPassword(
         usuario.email,
         usuario.senha
-      );
-
-      if(usuarioLogouComSucesso) {
+    ).then((result) => {
         this.navCtrl.setRoot(MenuPrincipalPage);
-      }
-    }
-    catch(e) {
-      console.error(e);
-    }
+    }).catch(function(error) {
+        console.error(error);
+    });
   }
 }

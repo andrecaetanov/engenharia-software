@@ -18,20 +18,26 @@ export class RegistroPage {
   }
 
   async registrar(usuario: Usuario) {
-      this.angularFireAuth.auth.createUserWithEmailAndPassword(
-        usuario.email,
-        usuario.senha
-      ).then((result) => {
-        this.navCtrl.push(LoginPage);
-        this.exibirMensagemRegistradoComSucesso();
-      }).catch(function(error) {
-        console.error(error);
-      });
+      if(usuario.senha === usuario.confirmacaoSenha) {
+        this.angularFireAuth.auth.createUserWithEmailAndPassword(
+          usuario.email,
+          usuario.senha
+        ).then((result) => {
+          this.navCtrl.push(LoginPage);
+          this.exibirMensagem('Você foi registrado com sucesso. Realize o login.');
+        }).catch(function(error) {
+          console.error(error);
+        });
+      }
+      else {
+        this.exibirMensagem('Os dois campos de senha não são iguais.');
+      }
+
   }
 
-  exibirMensagemRegistradoComSucesso() {
+  exibirMensagem(mensagem: string) {
     this.toast.create({
-      message: 'Você foi registrado com sucesso. Realize o login.',
+      message: mensagem,
       duration: 3000,
       position: 'bottom'
     }).present();
