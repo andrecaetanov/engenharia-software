@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SelecionarDificuldadePage } from '../selecionar-dificuldade/selecionar-dificuldade';
+import { InstrucoesPage } from '../instrucoes/instrucoes';
 
 @IonicPage()
 @Component({
@@ -18,5 +19,9 @@ export class MenuPrincipalPage {
 
   acessarPagina() {
     this.navCtrl.push(SelecionarDificuldadePage);
+  }
+
+  acessarPaginaInstrucoes() {
+    this.navCtrl.push(InstrucoesPage);
   }
 }

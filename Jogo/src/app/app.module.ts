@@ -8,13 +8,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { MenuPrincipalPage } from '../pages/menu-principal/menu-principal';
 import { SelecionarDificuldadePage } from '../pages/selecionar-dificuldade/selecionar-dificuldade';
+import { InstrucoesPage } from '../pages/instrucoes/instrucoes';
 
 @NgModule({
   declarations: [
     MyApp,
     MenuPrincipalPage,
     PerguntaPage,
-    SelecionarDificuldadePage
+    SelecionarDificuldadePage,
+    InstrucoesPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { SelecionarDificuldadePage } from '../pages/selecionar-dificuldade/selec
     MyApp,
     MenuPrincipalPage,
     PerguntaPage,
-    SelecionarDificuldadePage
+    SelecionarDificuldadePage,
+    InstrucoesPage
   ],
   providers: [
     StatusBar,
