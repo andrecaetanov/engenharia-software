@@ -1,6 +1,8 @@
+import { PerguntaProvider } from './../../providers/pergunta/pergunta';
 import { MenuPrincipalPage } from './../menu-principal/menu-principal';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Pergunta } from '../../models/pergunta';
 
 /**
  * Generated class for the PerguntaPage page.
@@ -13,10 +15,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-pergunta',
   templateUrl: 'pergunta.html',
+  providers: [PerguntaProvider]
 })
 export class PerguntaPage {
+  private perguntas: Pergunta[];
+  public perguntaAtual: Pergunta;
+  public indicePergunta: number = 0;
+  public pontuacao: number = 500;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private perguntaProvider: PerguntaProvider) {
+    this.perguntas = this.perguntaProvider.getPerguntas();
+    this.perguntaAtual = this.perguntas[this.indicePergunta];
   }
 
   ionViewDidLoad() {
@@ -25,6 +34,14 @@ export class PerguntaPage {
 
   retornarParaMenu() {
     this.navCtrl.push(MenuPrincipalPage);
+  }
+
+  passarParaProximaPergunta() {
+    if (this.indicePergunta < 1) {
+      this.indicePergunta++;
+      this.perguntaAtual = this.perguntas[this.indicePergunta];
+      this.pontuacao = this.pontuacao*2;
+    }
   }
 
 }

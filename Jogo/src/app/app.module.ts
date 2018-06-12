@@ -4,11 +4,18 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
+import { NativeAudio } from '@ionic-native/native-audio';
 
 import { MyApp } from './app.component';
 import { MenuPrincipalPage } from '../pages/menu-principal/menu-principal';
 import { SelecionarDificuldadePage } from '../pages/selecionar-dificuldade/selecionar-dificuldade';
 import { InstrucoesPage } from '../pages/instrucoes/instrucoes';
+import { OpcoesPage } from '../pages/opcoes/opcoes';
+import { LoginPage } from '../pages/login/login';
+import { FIREBASE_CONFIG } from '../firebase-config';
+import { RegistroPage } from '../pages/registro/registro';
 
 @NgModule({
   declarations: [
@@ -16,11 +23,16 @@ import { InstrucoesPage } from '../pages/instrucoes/instrucoes';
     MenuPrincipalPage,
     PerguntaPage,
     SelecionarDificuldadePage,
-    InstrucoesPage
+    InstrucoesPage,
+    OpcoesPage,
+    LoginPage,
+    RegistroPage,
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -28,12 +40,17 @@ import { InstrucoesPage } from '../pages/instrucoes/instrucoes';
     MenuPrincipalPage,
     PerguntaPage,
     SelecionarDificuldadePage,
-    InstrucoesPage
+    InstrucoesPage,
+    OpcoesPage,
+    LoginPage,
+    RegistroPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AngularFireAuth,
+    NativeAudio,
   ]
 })
 export class AppModule {}
