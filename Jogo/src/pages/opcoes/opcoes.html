@@ -1,0 +1,13 @@
+<ion-content padding>
+  <h1 class="titulo-opcoes" text-center>Opções</h1>
+  <ion-col col-6>
+      <ion-icon name="exit" class="icone-saida" (click)="retornarParaMenu()" ></ion-icon>
+  </ion-col>
+  <p class="audio">Audio</p>
+  <ion-item>
+    <ion-range min="0" max="100" step="2" [(ngModel)]="audio">
+      <ion-icon *ngIf= "audio == 0" small range-left name="volume-off"></ion-icon>
+      <ion-icon *ngIf= "audio > 0" small range-left name="volume-up"></ion-icon>
+    </ion-range>
+  </ion-item>
+</ion-content>

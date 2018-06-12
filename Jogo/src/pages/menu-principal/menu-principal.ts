@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SelecionarDificuldadePage } from '../selecionar-dificuldade/selecionar-dificuldade';
+import { OpcoesPage } from '../opcoes/opcoes';
 import { LoginPage } from '../login/login';
 import { NativeAudio } from '@ionic-native/native-audio';
-
 @IonicPage()
 @Component({
   selector: 'page-menu-principal',
@@ -26,6 +26,14 @@ export class MenuPrincipalPage {
 
   acessarPagina() {
     this.navCtrl.push(SelecionarDificuldadePage);
+  }
+
+  acessarPaginaOpcoes() {
+    this.navCtrl.push(OpcoesPage);
+  }
+
+  acessarOpcoes(){
+    this.navCtrl.push(OpcoesPage);
   }
 
   sair() {

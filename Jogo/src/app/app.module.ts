@@ -11,6 +11,7 @@ import { NativeAudio } from '@ionic-native/native-audio';
 import { MyApp } from './app.component';
 import { MenuPrincipalPage } from '../pages/menu-principal/menu-principal';
 import { SelecionarDificuldadePage } from '../pages/selecionar-dificuldade/selecionar-dificuldade';
+import { OpcoesPage } from '../pages/opcoes/opcoes';
 import { LoginPage } from '../pages/login/login';
 import { FIREBASE_CONFIG } from '../firebase-config';
 import { RegistroPage } from '../pages/registro/registro';
@@ -21,6 +22,7 @@ import { RegistroPage } from '../pages/registro/registro';
     MenuPrincipalPage,
     PerguntaPage,
     SelecionarDificuldadePage,
+    OpcoesPage,
     LoginPage,
     RegistroPage
   ],
@@ -36,6 +38,7 @@ import { RegistroPage } from '../pages/registro/registro';
     MenuPrincipalPage,
     PerguntaPage,
     SelecionarDificuldadePage,
+    OpcoesPage,
     LoginPage,
     RegistroPage
   ],
