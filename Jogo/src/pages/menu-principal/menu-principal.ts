@@ -20,10 +20,6 @@ export class MenuPrincipalPage {
     this.nativeAudio.loop('theme-song');
   }
 
-  ionViewDidLeave() {
-    this.nativeAudio.stop('theme-song');
-  }
-
   acessarPaginaSelecionarDificuldade() {
     this.navCtrl.push(SelecionarDificuldadePage);
   }
