@@ -38,5 +38,6 @@ export class MenuPrincipalPage {
 
   sair() {
     this.navCtrl.setRoot(LoginPage);
+    this.nativeAudio.stop('theme-song');
   }
 }
