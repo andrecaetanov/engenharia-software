@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MenuPrincipalPage } from '../menu-principal/menu-principal';
 
 /**
  * Generated class for the InstrucoesPage page.
@@ -20,6 +21,10 @@ export class InstrucoesPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad InstrucoesPage');
+  }
+
+  acessarPaginaMenu() {
+    this.navCtrl.push(MenuPrincipalPage);
   }
 
 }

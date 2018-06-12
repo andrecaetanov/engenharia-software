@@ -2,18 +2,16 @@
 
 	<ion-slides pager>
 
-	  <ion-slide>
+	  <ion-slide class="textoInstrucoes">
 	    <h1>Quem quer ser um engenheiro</h1>
-	    <p>O jogo Quem quer ser um engenheiro tem como objetivo ensinar Engenharia de Software de um jeito descontraído e divertido.</p>
-	    <button ion-button color="light" clear class="botao-instrucoes">Voltar</button>
+	    <p>O jogo Quem quer ser um engenheiro foi baseado no jogo Quem quer ser um milionário e tem como objetivo ensinar Engenharia de Software de um jeito descontraído e divertido. Consiste em um jogo de perguntas e respostas, onde o jogador vai aculando XP a medida que responde às perguntas corretamente.</p>
+	    <button ion-button color="light" clear class="botao-instrucoes" (click)="acessarPaginaMenu()">Voltar</button>
 	  </ion-slide>
 
-	  <ion-slide>
-	    <h1>Slide 2</h1>
-	  </ion-slide>
-
-	  <ion-slide>
-	    <h1>Slide 3</h1>
+	  <ion-slide class="textoInstrucoes">
+      <h1>Como jogar</h1>
+      <p>O jogo possui três níveis de dificuldade, o jogador deve assinalar a opcção escolhida. Feito isso o jogador deverá responder às perguntas correspondentes. Se o jogador errar o jogo se encerra. O jogador possui 2 dicas e 2 sopros, e pode solicitá-los a qualque momento do jogo. A dica informa a probabilidade de as alternativas estarem certas e o sopro a opinião dos convidados, ambas as dicas são confiáveis. </p>
+      <button ion-button color="light" clear class="botao-instrucoes" (click)="acessarPaginaMenu()">Voltar</button>
 	  </ion-slide>
 
 	</ion-slides>
