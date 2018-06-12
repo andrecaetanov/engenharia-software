@@ -21,9 +21,10 @@ export class PerguntaPage {
   private perguntas: Pergunta[];
   public perguntaAtual: Pergunta;
   public indicePergunta: number = 0;
+  public pontuacao: number = 500;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private perguntaProvider: PerguntaProvider) {
-    this.perguntas = perguntaProvider.getPerguntas();
+    this.perguntas = this.perguntaProvider.getPerguntas();
     this.perguntaAtual = this.perguntas[this.indicePergunta];
   }
 
@@ -36,8 +37,11 @@ export class PerguntaPage {
   }
 
   passarParaProximaPergunta() {
-    this.indicePergunta++;
-    this.perguntaAtual = this.perguntas[this.indicePergunta];
+    if (this.indicePergunta < 1) {
+      this.indicePergunta++;
+      this.perguntaAtual = this.perguntas[this.indicePergunta];
+      this.pontuacao = this.pontuacao*2;
+    }
   }
 
 }
