@@ -1,0 +1,36 @@
+<ion-content padding>
+  <div padding>
+    <ion-row>
+      <ion-col>
+        <img class="logo" src="assets/imgs/logo.png" />
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list inset class="no-border">
+          <ion-item>
+            <ion-label>Nome</ion-label>
+            <ion-input type="text" [(ngModel)]="usuario.nome"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>E-mail</ion-label>
+            <ion-input type="text" [(ngModel)]="usuario.email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Senha</ion-label>
+            <ion-input type="password" [(ngModel)]="usuario.senha"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Confirmar Senha</ion-label>
+            <ion-input type="password" [(ngModel)]="usuario.confirmacaoSenha"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button class="register-button" (click)="registrar(usuario)">Registrar</button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
