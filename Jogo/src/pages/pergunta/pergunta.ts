@@ -37,7 +37,7 @@ export class PerguntaPage {
   }
 
   passarParaProximaPergunta() {
-    if (this.indicePergunta < 1) {
+    if (this.indicePergunta < 4) {
       this.indicePergunta++;
       this.perguntaAtual = this.perguntas[this.indicePergunta];
       this.pontuacao = this.pontuacao*2;
