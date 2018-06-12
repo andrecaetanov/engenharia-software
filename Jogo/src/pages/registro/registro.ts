@@ -32,7 +32,6 @@ export class RegistroPage {
       else {
         this.exibirMensagem('Os dois campos de senha não são iguais.');
       }
-
   }
 
   exibirMensagem(mensagem: string) {

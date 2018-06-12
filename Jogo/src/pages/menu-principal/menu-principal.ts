@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SelecionarDificuldadePage } from '../selecionar-dificuldade/selecionar-dificuldade';
 import { LoginPage } from '../login/login';
+import { NativeAudio } from '@ionic-native/native-audio';
 
 @IonicPage()
 @Component({
@@ -10,7 +11,17 @@ import { LoginPage } from '../login/login';
 })
 export class MenuPrincipalPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams, private nativeAudio: NativeAudio) {
+  }
+
+  ionViewDidLoad() {
+    this.nativeAudio.preloadSimple('theme-song', 'assets/audios/theme-song.mp3');
+    this.nativeAudio.loop('theme-song');
+  }
+
+  ionViewDidLeave() {
+    this.nativeAudio.stop('theme-song');
   }
 
   acessarPaginaSelecionarDificuldade() {
