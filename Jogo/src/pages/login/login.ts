@@ -14,8 +14,7 @@ export class LoginPage {
 
   usuario = {} as Usuario;
 
-  constructor(private angularFireAuth: AngularFireAuth,
-              public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private angularFireAuth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   acessarRegistro() {

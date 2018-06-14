@@ -13,8 +13,7 @@ export class RegistroPage {
 
   usuario = {} as Usuario;
 
-  constructor(private angularFireAuth: AngularFireAuth, private toast: ToastController,
-              public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private angularFireAuth: AngularFireAuth, private toast: ToastController, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   async registrar(usuario: Usuario) {
