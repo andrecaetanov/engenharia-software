@@ -41,4 +41,8 @@ export class RegistroPage {
       position: 'bottom'
     }).present();
   }
+
+  retornarParaLogin() {
+    this.navCtrl.push(LoginPage);
+  }
 }

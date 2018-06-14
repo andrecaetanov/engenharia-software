@@ -69,6 +69,26 @@ export class PerguntaProvider {
       alternativaIncorreta2: "Garantia",
       alternativaIncorreta3: "Processos"
     };
+
+    this.perguntas[5] = {
+      titulo: "No caso de software, qual opção NÃO identifica um aumento de qualidade:",
+      nivel: this.niveis[0],
+      area: this.areas[0],
+      alternativaCorreta: "Ampliação do prazo de entrega",
+      alternativaIncorreta1: "Maior satisfação do cliente",
+      alternativaIncorreta2: "Reaproveitamento de códigos do programa",
+      alternativaIncorreta3: "Menor custo de manutenção"
+    };
+
+    this.perguntas[6] = {
+      titulo: "O proceso de ________ chega ao seu final no momento da ________ do software, ou seja, quando não se vai mais utilizá-lo",
+      nivel: this.niveis[1],
+      area: this.areas[0],
+      alternativaCorreta: "Manutenção, descontinuação",
+      alternativaIncorreta1: "Liberação, entrega",
+      alternativaIncorreta2: "Manutenção, entrega",
+      alternativaIncorreta3: "Avaliação, implementação"
+    };
   }
 
   public getPerguntas() {
