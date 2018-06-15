@@ -23,12 +23,7 @@ export class OpcoesPage {
     console.log('ionViewDidLoad OpcoesPage');
   }
 
-  acessarOpcoes() {
-    this.navCtrl.push(OpcoesPage);
-  }
-
   retornarParaMenu() {
     this.navCtrl.push(MenuPrincipalPage);
   }
-
 }

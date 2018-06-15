@@ -4,12 +4,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Pergunta } from '../../models/pergunta';
 
-/**
- * Generated class for the PerguntaPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import shuffle from 'shuffle-array';
+const TOTAL_PERGUNTAS = 4;
 
 @IonicPage()
 @Component({
@@ -20,12 +16,16 @@ import { Pergunta } from '../../models/pergunta';
 export class PerguntaPage {
   private perguntas: Pergunta[];
   public perguntaAtual: Pergunta;
-  public indicePergunta: number = 0;
-  public pontuacao: number = 500;
+  private indicePergunta: number;
+  public pontuacao: number;
+  public alternativas: string[] = new Array();
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private perguntaProvider: PerguntaProvider) {
     this.perguntas = this.perguntaProvider.getPerguntas();
+    this.indicePergunta = 0;
     this.perguntaAtual = this.perguntas[this.indicePergunta];
+    this.sortearAlternativas();
+    this.pontuacao = 500;
   }
 
   ionViewDidLoad() {
@@ -36,12 +36,26 @@ export class PerguntaPage {
     this.navCtrl.push(MenuPrincipalPage);
   }
 
-  passarParaProximaPergunta() {
-    if (this.indicePergunta < 4) {
-      this.indicePergunta++;
-      this.perguntaAtual = this.perguntas[this.indicePergunta];
-      this.pontuacao = this.pontuacao*2;
+  verificarResposta(alternativa: string) {
+    if (this.indicePergunta < TOTAL_PERGUNTAS) {
+      if (alternativa == this.perguntaAtual.alternativaCorreta) {
+        this.indicePergunta++;
+        this.perguntaAtual = this.perguntas[this.indicePergunta];
+        this.sortearAlternativas();
+        this.pontuacao = this.pontuacao*2;
+      }
+      else {
+        this.retornarParaMenu();
+      }
     }
   }
 
+  sortearAlternativas() {
+    this.alternativas.push(this.perguntaAtual.alternativaCorreta);
+    this.alternativas.push(this.perguntaAtual.alternativaIncorreta1);
+    this.alternativas.push(this.perguntaAtual.alternativaIncorreta2);
+    this.alternativas.push(this.perguntaAtual.alternativaIncorreta3);
+
+    this.alternativas = shuffle(this.alternativas);
+  }
 }

@@ -21,9 +21,17 @@
     </ion-row>
   </ion-grid>
   <div class="alternativas">
-    <button ion-button full class="botao-generico" (click)="passarParaProximaPergunta()" ><p>A:</p>&nbsp;{{perguntaAtual.alternativaIncorreta1}}</button>
-    <button ion-button full class="botao-generico" (click)="passarParaProximaPergunta()"><p>B:</p>&nbsp;{{perguntaAtual.alternativaCorreta}}</button>
-    <button ion-button full class="botao-generico" (click)="passarParaProximaPergunta()"><p>C:</p>&nbsp;{{perguntaAtual.alternativaIncorreta2}}</button>
-    <button ion-button full class="botao-generico" (click)="passarParaProximaPergunta()"><p>D:</p>&nbsp;{{perguntaAtual.alternativaIncorreta3}}</button>
+    <button ion-button full class="botao-generico" (click)="verificarResposta(alternativas[0])" >
+      <p>A:</p>&nbsp;{{alternativas[0]}}
+    </button>
+    <button ion-button full class="botao-generico" (click)="verificarResposta(alternativas[1])">
+      <p>B:</p>&nbsp;{{alternativas[1]}}
+    </button>
+    <button ion-button full class="botao-generico" (click)="verificarResposta(alternativas[2])">
+      <p>C:</p>&nbsp;{{alternativas[2]}}
+    </button>
+    <button ion-button full class="botao-generico" (click)="verificarResposta(alternativas[3])">
+      <p>D:</p>&nbsp;{{alternativas[3]}}
+    </button>
   </div>
 </ion-content>

@@ -20,6 +20,14 @@ export class PerguntaProvider {
   ];
 
   constructor() {
+    this.criarPerguntas();
+  }
+
+  public getPerguntas() {
+    return this.perguntas;
+  }
+
+  private criarPerguntas() {
     this.perguntas[0] = {
       titulo: "Qual dos paradigmas abaixo tem análise de riscos como etapa?",
       nivel: this.niveis[0],
@@ -69,9 +77,5 @@ export class PerguntaProvider {
       alternativaIncorreta2: "Garantia",
       alternativaIncorreta3: "Processos"
     };
-  }
-
-  public getPerguntas() {
-    return this.perguntas;
   }
 }
