@@ -28,7 +28,7 @@ export class PerguntaProvider {
   }
 
   private criarPerguntas() {
-    this.perguntas[0] = {
+    this.perguntas.push({
       titulo: "Qual dos paradigmas abaixo tem análise de riscos como etapa?",
       nivel: this.niveis[0],
       area: this.areas[3],
@@ -36,9 +36,9 @@ export class PerguntaProvider {
       alternativaIncorreta1: "Cascata",
       alternativaIncorreta2: "Prototipação",
       alternativaIncorreta3: "Linear"
-    };
+    });
 
-    this.perguntas[1] = {
+    this.perguntas.push({
       titulo: "Conjunto de práticas que servem de guia a um grupo para trabalhar de maneira produtiva:",
       nivel: this.niveis[0],
       area: this.areas[3],
@@ -46,9 +46,9 @@ export class PerguntaProvider {
       alternativaIncorreta1: "Engenharia de Software",
       alternativaIncorreta2: "Manifesto Ágil",
       alternativaIncorreta3: "Qualidade de Software"
-    };
+    });
 
-    this.perguntas[2] = {
+    this.perguntas.push({
       titulo: "Pode variar de uma declaração abstrata de alto nível de um serviço ou de uma restrição do sistema para uma especificação matemática funcional:",
       nivel: this.niveis[2],
       area: this.areas[0],
@@ -56,9 +56,9 @@ export class PerguntaProvider {
       alternativaIncorreta1: "Variável de Seção",
       alternativaIncorreta2: "Função Abstrata",
       alternativaIncorreta3: "Polimorfismo"
-    };
+    });
 
-    this.perguntas[3] = {
+    this.perguntas.push({
       titulo: "Processo que estabelece os serviços que o cliente necessita do sistema e as restrições sob as quais ele opera e é desenvolvido:",
       nivel: this.niveis[1],
       area: this.areas[0],
@@ -66,9 +66,9 @@ export class PerguntaProvider {
       alternativaIncorreta1: "Engenharia de Software",
       alternativaIncorreta2: "Teste de Software",
       alternativaIncorreta3: "Qualidade de Software"
-    };
+    });
 
-    this.perguntas[4] = {
+    this.perguntas.push({
       titulo: "A descrição de produtos deve conter informações que sejam testáveis e corretas. Essa afirmativa representa requisitos de:",
       nivel: this.niveis[1],
       area: this.areas[0],
@@ -76,6 +76,6 @@ export class PerguntaProvider {
       alternativaIncorreta1: "Testabilidade",
       alternativaIncorreta2: "Garantia",
       alternativaIncorreta3: "Processos"
-    };
+    });
   }
 }

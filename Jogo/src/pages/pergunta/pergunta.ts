@@ -3,8 +3,8 @@ import { MenuPrincipalPage } from './../menu-principal/menu-principal';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Pergunta } from '../../models/pergunta';
-
 import shuffle from 'shuffle-array';
+
 const TOTAL_PERGUNTAS = 4;
 
 @IonicPage()
@@ -51,6 +51,7 @@ export class PerguntaPage {
   }
 
   sortearAlternativas() {
+    this.alternativas = new Array();
     this.alternativas.push(this.perguntaAtual.alternativaCorreta);
     this.alternativas.push(this.perguntaAtual.alternativaIncorreta1);
     this.alternativas.push(this.perguntaAtual.alternativaIncorreta2);
