@@ -1,9 +1,9 @@
+import { Alternativa } from './alternativa';
+
 export interface Pergunta {
   titulo: string;
-  nivel: string;
+  nivelDificuldade: string;
   area: string;
-  alternativaCorreta: string;
-  alternativaIncorreta1: string;
-  alternativaIncorreta2: string;
-  alternativaIncorreta3: string;
+  alternativaCorreta: Alternativa;
+  alternativasIncorretas: Alternativa[];
 }
