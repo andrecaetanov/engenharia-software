@@ -13,25 +13,26 @@
   <ion-grid class="dica-sopro">
     <ion-row>
       <ion-col col-6>
-        <img src="assets/imgs/dica.png">
+        <img *ngIf="!usouDica" (click)="usarDica()" src="assets/imgs/dica.png">
+        <img *ngIf="usouDica" [style.opacity]="0.2" src="assets/imgs/dica.png">
       </ion-col>
       <ion-col col-6>
-        <img src="assets/imgs/sopro.png">
+        <img (click)="usarSopro()" src="assets/imgs/sopro.png">
       </ion-col>
     </ion-row>
   </ion-grid>
   <div class="alternativas">
-    <button ion-button full class="botao-generico" (click)="verificarResposta(alternativas[0])" >
-      <p>A:</p>&nbsp;{{alternativas[0]}}
+    <button ion-button full class="botao-generico" [disabled]="alternativas[0].desabilitada" (click)="verificarResposta(alternativas[0])" >
+      <p>A:</p>&nbsp;{{ alternativas[0].titulo }}&nbsp;{{ alternativas[0].porcentagemSopro }}
     </button>
-    <button ion-button full class="botao-generico" (click)="verificarResposta(alternativas[1])">
-      <p>B:</p>&nbsp;{{alternativas[1]}}
+    <button ion-button full class="botao-generico" [disabled]="alternativas[1].desabilitada" (click)="verificarResposta(alternativas[1])">
+      <p>B:</p>&nbsp;{{ alternativas[1].titulo }}&nbsp;{{ alternativas[1].porcentagemSopro }}
     </button>
-    <button ion-button full class="botao-generico" (click)="verificarResposta(alternativas[2])">
-      <p>C:</p>&nbsp;{{alternativas[2]}}
+    <button ion-button full class="botao-generico" [disabled]="alternativas[2].desabilitada" (click)="verificarResposta(alternativas[2])">
+      <p>C:</p>&nbsp;{{ alternativas[2].titulo }}&nbsp;{{ alternativas[2].porcentagemSopro }}
     </button>
-    <button ion-button full class="botao-generico" (click)="verificarResposta(alternativas[3])">
-      <p>D:</p>&nbsp;{{alternativas[3]}}
+    <button ion-button full class="botao-generico" [disabled]="alternativas[3].desabilitada" (click)="verificarResposta(alternativas[3])">
+      <p>D:</p>&nbsp;{{ alternativas[3].titulo }}&nbsp;{{ alternativas[3].porcentagemSopro }}
     </button>
   </div>
 </ion-content>
