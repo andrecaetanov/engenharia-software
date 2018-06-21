@@ -41,7 +41,7 @@ export class PerguntaPage {
         this.indicePergunta++;
         this.perguntaAtual = this.perguntas[this.indicePergunta];
         this.sortearAlternativas();
-        this.pontuacao = this.pontuacao*2;
+        this.calcularPontuacao(this.indicePergunta);
       }
       else {
         this.retornarParaMenu();
@@ -103,5 +103,20 @@ export class PerguntaPage {
         porcentagem = porcentagem - alternativa.porcentagemSopro;
       });*/
     }
+  }
+
+  calcularPontuacao(x: number) {
+    this.pontuacao = -0.0000772376 * Math.pow(x, 16) 
+      + 0.00950231 * Math.pow(x, 15) 
+      - 0.536279 * Math.pow(x, 14) 
+      + 18.4071 * Math.pow(x, 13) 
+      - 429.497 * Math.pow(x, 12) 
+      + 7213.2 * Math.pow(x, 11) 
+      - 90050.9 * Math.pow(x, 10) 
+      + 850927 * Math.pow(x, 9) 
+      - 6.13852 * Math.pow(10, 6) * Math.pow(x, 8)
+      + 3.38434 * Math.pow(10, 7) * Math.pow(x, 7)
+      - 1.41766 * Math.pow(10, 8) * Math.pow(x, 6)
+      + 4.4512;
   }
 }
