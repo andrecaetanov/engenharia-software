@@ -72,6 +72,66 @@ export class PerguntaProvider {
 
   private criarPerguntas() {
     this.perguntas.push({
+      titulo: "Além das atividades de inspeção de software, outras atividades de suma importância no contexto do processo de verificação e validação são aquelas relacionadas:",
+      nivelDificuldade: this.niveisDificuldade[0],
+      area: this.areas[4],
+      alternativaCorreta: {titulo: "Teste de software"},
+      alternativasIncorretas: [
+        {titulo: "Manutenção de software"}, {titulo: "Estimativa de custo de software"}, {titulo: "Gerenciamento de configuração de software"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Qual dos testes a seguir pode ser classificada em alguns dos itens como stress, execução, operação, compliance, segurança, recuperação contingência e também é conhecido como teste da caixa branca:",
+      nivelDificuldade: this.niveisDificuldade[1],
+      area: this.areas[4],
+      alternativaCorreta: {titulo: "Caixa branca"},
+      alternativasIncorretas: [
+        {titulo: "Baseado em requisitos"}, {titulo: "De partições"}, {titulo: "De equivalência"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Foram detectados problemas no sistema como data de nascimento preenchida com data futura, campos de preenchimento obrigatório que não são validados, botões que não executam as ações devidas. Esses problemas são rastreados por esse tipo de teste também conhecido de teste funcional:",
+      nivelDificuldade: this.niveisDificuldade[1],
+      area: this.areas[4],
+      alternativaCorreta: {titulo: "Caixa preta"},
+      alternativasIncorretas: [
+        {titulo: "Caixa branca"}, {titulo: "Unidade"}, {titulo: "Integração"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Os testes de software são executados, usando os procedimentos e documentos de script de teste. Para que a fase de execução de teste, seja realizada com sucesso deve(m) ser executado(s):",
+      nivelDificuldade: this.niveisDificuldade[0],
+      area: this.areas[4],
+      alternativaCorreta: {titulo: "Casos de teste"},
+      alternativasIncorretas: [
+        {titulo: "Casos de uso"}, {titulo: "Testes de Turing"}, {titulo: "Teste de COMA"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Qual a técnica de teste que consiste em se aplicar, a cada nova versão do software ou a cada ciclo, todos os testes que já foram aplicados nas versões ou ciclos de teste anteriores do sistema:",
+      nivelDificuldade: this.niveisDificuldade[0],
+      area: this.areas[4],
+      alternativaCorreta: {titulo: "Regressão"},
+      alternativasIncorretas: [
+        {titulo: "Caixa preta"}, {titulo: "Caixa branca"}, {titulo: "Caixa cinza"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Assinale a alternativa que não corresponde a um dos testes de software,realizados em softwares comerciais:",
+      nivelDificuldade: this.niveisDificuldade[1],
+      area: this.areas[4],
+      alternativaCorreta: {titulo: "Teste de volatilidade de requisitos"},
+      alternativasIncorretas: [
+        {titulo: "Teste de validação"}, {titulo: "Teste de integração"}, {titulo: "Teste de unidade"}
+      ]
+    });
+
+    this.perguntas.push({
       titulo: "Qual dos paradigmas abaixo tem análise de riscos como etapa?",
       nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[3],
