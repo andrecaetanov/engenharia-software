@@ -72,6 +72,66 @@ export class PerguntaProvider {
 
   private criarPerguntas() {
     this.perguntas.push({
+      titulo: "Para garantir a qualidade e a eficácia do desenvolvimento do projeto, o gerente de projetos deve focar em:",
+      nivelDificuldade: this.niveisDificuldade[0],
+      area: this.areas[3],
+      alternativaCorreta: {titulo: "Planos de comunicação"},
+      alternativasIncorretas: [
+        {titulo: " treinamento"}, {titulo: "Diagrama de rede"}, {titulo: "Engenharia de requisitos"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Seu objetivo é a otimização do retorno sobre o investimento aplicado no decorrer dos projetos e em completa sintonia com as metas e articulações estratégicas do empreendimento. Essa informação se refere ao:",
+      nivelDificuldade: this.niveisDificuldade[1],
+      area: this.areas[3],
+      alternativaCorreta: {titulo: "Gerenciamento de Portfólios de Projetos"},
+      alternativasIncorretas: [
+        {titulo: "Análise de riscos"}, {titulo: "Gerenciamento Integrado de Projetos"}, {titulo: "Gerenciamento Total da Qualidade"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Esse documento pode conter a necessidade do negócio, a definição do produto, o nome do gerente e a justificativa da importância do projeto. É o documento que autoriza formalmente o projeto. Esse  documento é chamado de:",
+      nivelDificuldade: this.niveisDificuldade[1],
+      area: this.areas[3],
+      alternativaCorreta: {titulo: "Project Charter"},
+      alternativasIncorretas: [
+        {titulo: "Scope Statement"}, {titulo: "Service Contract"}, {titulo: "Open Contract"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Composto de uma estrutura mais completa, possui as propriedades básicas de registros, conjuntos e ocorrências, e utiliza a linguagem de definição e a linguagem de manipulação de dados. As características mencionadas se referem o(a):",
+      nivelDificuldade: this.niveisDificuldade[1],
+      area: this.areas[3],
+      alternativaCorreta: {titulo: "O Modelo de Rede"},
+      alternativasIncorretas: [
+        {titulo: "O Flowcharting"}, {titulo: "O Nivelamento Heurístico dos Recursos"}, {titulo: "A Medição de Desempenho"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Qual dos paradigmas abaixo tem análise de riscos como etapa?",
+      nivelDificuldade: this.niveisDificuldade[0],
+      area: this.areas[3],
+      alternativaCorreta: {titulo: "Espiral"},
+      alternativasIncorretas: [
+        {titulo: "Cascata"}, {titulo: "Prototipação"}, {titulo: "Linear"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Conjunto de práticas que servem de guia a um grupo para trabalhar de maneira produtiva:",
+      nivelDificuldade: this.niveisDificuldade[0],
+      area: this.areas[3],
+      alternativaCorreta: {titulo: "Gerência de Projetos"},
+      alternativasIncorretas: [
+        {titulo: "Engenharia de Software"}, {titulo: "Manifesto Ágil"}, {titulo: "Qualidade de Software"}
+      ]
+    });
+
+    this.perguntas.push({
       titulo: " Qual dos testes a seguir é realizado em ambientes de laboratório e comumente são executados por funcionários internos que simulam usuários reais, realizando tarefas típicas no aplicativo:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[4],
@@ -158,26 +218,6 @@ export class PerguntaProvider {
       alternativaCorreta: {titulo: "Teste de volatilidade de requisitos"},
       alternativasIncorretas: [
         {titulo: "Teste de validação"}, {titulo: "Teste de integração"}, {titulo: "Teste de unidade"}
-      ]
-    });
-
-    this.perguntas.push({
-      titulo: "Qual dos paradigmas abaixo tem análise de riscos como etapa?",
-      nivelDificuldade: this.niveisDificuldade[0],
-      area: this.areas[3],
-      alternativaCorreta: {titulo: "Espiral"},
-      alternativasIncorretas: [
-        {titulo: "Cascata"}, {titulo: "Prototipação"}, {titulo: "Linear"}
-      ]
-    });
-
-    this.perguntas.push({
-      titulo: "Conjunto de práticas que servem de guia a um grupo para trabalhar de maneira produtiva:",
-      nivelDificuldade: this.niveisDificuldade[0],
-      area: this.areas[3],
-      alternativaCorreta: {titulo: "Gerência de Projetos"},
-      alternativasIncorretas: [
-        {titulo: "Engenharia de Software"}, {titulo: "Manifesto Ágil"}, {titulo: "Qualidade de Software"}
       ]
     });
 
