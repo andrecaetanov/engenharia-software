@@ -72,32 +72,42 @@ export class PerguntaProvider {
 
   private criarPerguntas() {
     this.perguntas.push({
+      titulo: " Qual dos testes a seguir é realizado em ambientes de laboratório e comumente são executados por funcionários internos que simulam usuários reais, realizando tarefas típicas no aplicativo:",
+      nivelDificuldade: this.niveisDificuldade[2],
+      area: this.areas[4],
+      alternativaCorreta: {titulo: "Teste Alfa"},
+      alternativasIncorretas: [
+        {titulo: "Teste Beta"}, {titulo: "Teste de Regressão"}, {titulo: "Teste Fumaça"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "A fase de elaboração dos testes de software é uma das partes mais importantes, no desenvolvimento de um software.Sobre o teste de caixa branca,assinale a alternativa correta:",
+      nivelDificuldade: this.niveisDificuldade[2],
+      area: this.areas[4],
+      alternativaCorreta: {titulo: "É a utilização de um sistema, para controlar a execução dos testes de um Software"},
+      alternativasIncorretas: [
+        {titulo: "Ferramenta de instalação de Software"}, {titulo: "Tem como principal tarefa, ajudar na concepção do Software"}, {titulo: "É a tarefa executada, pelos analistas de teste, tendo como objetivo descrever os fluxos dos UCs do Sistema"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Assinale a alternativa correta, sobre automação de teste de software:",
+      nivelDificuldade: this.niveisDificuldade[2],
+      area: this.areas[4],
+      alternativaCorreta: {titulo: "Teste do código fonte, de cada linha de código possível, dos fluxos básicos e dos alternativos"},
+      alternativasIncorretas: [
+        {titulo: "Teste feito pela equipe de testadores de software"}, {titulo: "Teste executado, após a implantação do software"}, {titulo: "Teste feito pelo próprio programador que verifica, se o código que foi construído, é não funcional"}
+      ]
+    });
+
+    this.perguntas.push({
       titulo: "Além das atividades de inspeção de software, outras atividades de suma importância no contexto do processo de verificação e validação são aquelas relacionadas:",
       nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[4],
       alternativaCorreta: {titulo: "Teste de software"},
       alternativasIncorretas: [
         {titulo: "Manutenção de software"}, {titulo: "Estimativa de custo de software"}, {titulo: "Gerenciamento de configuração de software"}
-      ]
-    });
-
-    this.perguntas.push({
-      titulo: "Qual dos testes a seguir pode ser classificada em alguns dos itens como stress, execução, operação, compliance, segurança, recuperação contingência e também é conhecido como teste da caixa branca:",
-      nivelDificuldade: this.niveisDificuldade[1],
-      area: this.areas[4],
-      alternativaCorreta: {titulo: "Caixa branca"},
-      alternativasIncorretas: [
-        {titulo: "Baseado em requisitos"}, {titulo: "De partições"}, {titulo: "De equivalência"}
-      ]
-    });
-
-    this.perguntas.push({
-      titulo: "Foram detectados problemas no sistema como data de nascimento preenchida com data futura, campos de preenchimento obrigatório que não são validados, botões que não executam as ações devidas. Esses problemas são rastreados por esse tipo de teste também conhecido de teste funcional:",
-      nivelDificuldade: this.niveisDificuldade[1],
-      area: this.areas[4],
-      alternativaCorreta: {titulo: "Caixa preta"},
-      alternativasIncorretas: [
-        {titulo: "Caixa branca"}, {titulo: "Unidade"}, {titulo: "Integração"}
       ]
     });
 
@@ -118,6 +128,26 @@ export class PerguntaProvider {
       alternativaCorreta: {titulo: "Regressão"},
       alternativasIncorretas: [
         {titulo: "Caixa preta"}, {titulo: "Caixa branca"}, {titulo: "Caixa cinza"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Qual dos testes a seguir pode ser classificada em alguns dos itens como stress, execução, operação, compliance, segurança, recuperação contingência e também é conhecido como teste da caixa branca:",
+      nivelDificuldade: this.niveisDificuldade[1],
+      area: this.areas[4],
+      alternativaCorreta: {titulo: "Estrutural"},
+      alternativasIncorretas: [
+        {titulo: "Baseado em requisitos"}, {titulo: "De partições"}, {titulo: "De equivalência"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Foram detectados problemas no sistema como data de nascimento preenchida com data futura, campos de preenchimento obrigatório que não são validados, botões que não executam as ações devidas. Esses problemas são rastreados por esse tipo de teste também conhecido de teste funcional:",
+      nivelDificuldade: this.niveisDificuldade[1],
+      area: this.areas[4],
+      alternativaCorreta: {titulo: "Caixa preta"},
+      alternativasIncorretas: [
+        {titulo: "Caixa branca"}, {titulo: "Unidade"}, {titulo: "Integração"}
       ]
     });
 
