@@ -6,7 +6,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Pergunta } from '../../models/pergunta';
 import shuffle from 'shuffle-array';
 
-const TOTAL_PERGUNTAS = 4;
+const TOTAL_PERGUNTAS = 27;
 
 @IonicPage()
 @Component({
