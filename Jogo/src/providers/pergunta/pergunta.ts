@@ -71,6 +71,35 @@ export class PerguntaProvider {
   }
 
   private criarPerguntas() {
+    this.perguntas.push({
+      titulo: "Sobre requisitos não funcionais,assinale a alternativa incorreta:",
+      nivelDificuldade: this.niveisDificuldade[2],
+      area: this.areas[0],
+      alternativaCorreta: {titulo: "É fácil estimar prazo/esforço/custo para implementação"},
+      alternativasIncorretas: [
+        {titulo: "Trata-se de algo que não é uma funcionalidade, mas que precisa ser realizado para que o software atenda seu propósito"}, {titulo: "Requisitos não funcionais são tão importantes quanto os requisitos funcionais ou regras de negócio"}, {titulo: "Requisitos não funcionais incluem atributos de qualidade para o produto"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Sobre engenharia de requisitos, assinale a alternativa correta:",
+      nivelDificuldade: this.niveisDificuldade[2],
+      area: this.areas[0],
+      alternativaCorreta: {titulo: "Requisitos de software são descobertos por meio de um processo chamado elicitação"},
+      alternativasIncorretas: [
+        {titulo: "Em processos ágeis de desenvolvimento de software, os requisitos devem ser definidos em detalhes no início do projeto"}, {titulo: "A validação de requisitos consiste no teste dos requisitos implementados no software em funcionamento"}, {titulo: " Requisitos não funcionais descrevem o que um software não deve fazer"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "O levantamento de requisitos é o começo de todo desenvolvimento de software, sendo essa atividade repetida em todas as demais etapas da engenharia de requisitos. Sobre essa atividade e suas técnicas assinale a alternativa incorreta:",
+      nivelDificuldade: this.niveisDificuldade[2],
+      area: this.areas[0],
+      alternativaCorreta: {titulo: "A etnografia é uma técnica de conversação que pode ser utilizada para compreender os requisitos sociais e organizacionais"},
+      alternativasIncorretas: [
+        {titulo: "Algumas das razões para o baixo grau de satisfação dos usuários para os sistemas destacam-se a fase de levantamento de requisitos do projeto"}, {titulo: "As técnicas de levantamento de requisitos têm por objetivo superar as dificuldades relativas a esta fase"}, {titulo: "Workshops trata-se de uma técnica de elicitação em grupo usada em uma reunião estruturada"}
+      ]
+    });
 
     this.perguntas.push({
       titulo: "Qual método é usado para testar e explorar a capacidade criativa de indivíduos ou grupos:",
