@@ -71,6 +71,67 @@ export class PerguntaProvider {
   }
 
   private criarPerguntas() {
+
+    this.perguntas.push({
+      titulo: "Qual método é usado para testar e explorar a capacidade criativa de indivíduos ou grupos:",
+      nivelDificuldade: this.niveisDificuldade[0],
+      area: this.areas[0],
+      alternativaCorreta: {titulo: "Dinâmica"},
+      alternativasIncorretas: [
+        {titulo: "Questionário"}, {titulo: "Entrevista"}, {titulo: "Observação pessoal"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Qual atividade da engenharia de requisitos visa demonstrar que o documento de requisitos produzido corresponde, de fato, ao sistema que o cliente pretende:",
+      nivelDificuldade: this.niveisDificuldade[0],
+      area: this.areas[0],
+      alternativaCorreta: {titulo: "Validação"},
+      alternativasIncorretas: [
+        {titulo: "Análise de viabilidade"}, {titulo: "Construção"}, {titulo: "Elaboração do Termo de Abertura"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "A descrição de produtos deve conter informações que sejam testáveis e corretas. Essa afirmativa representa requisitos de:",
+      nivelDificuldade: this.niveisDificuldade[0],
+      area: this.areas[0],
+      alternativaCorreta: {titulo: "Qualidade"},
+      alternativasIncorretas: [
+        {titulo: "Testabilidade"}, {titulo: "Garantia"}, {titulo: "Processos"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Qual processo de engenharia de requisitos é composto por quatro atividades de alto nível:",
+      nivelDificuldade: this.niveisDificuldade[1],
+      area: this.areas[0],
+      alternativaCorreta: {titulo: "Levantamento, análise e negociação, especificação e documentação, validação"},
+      alternativasIncorretas: [
+        {titulo: "Preparação, especificação e documentação, afirmação e implantação"}, {titulo: "Levantamento e preparação, investigação, viabilidade, confirmação"}, {titulo: "Identificação, planejamento, atribuição, validação"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Qual das alternativas a seguir não é uma técnica de validação:",
+      nivelDificuldade: this.niveisDificuldade[1],
+      area: this.areas[0],
+      alternativaCorreta: {titulo: "Flowcharting"},
+      alternativasIncorretas: [
+        {titulo: "Geração de casos de teste"}, {titulo: "Revisões dos requisitoe"}, {titulo: "Revisões dos requisito"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Processo que estabelece os serviços que o cliente necessita do sistema e as restrições sob as quais ele opera e é desenvolvido:",
+      nivelDificuldade: this.niveisDificuldade[1],
+      area: this.areas[0],
+      alternativaCorreta: {titulo: "Engenharia de Requisitos"},
+      alternativasIncorretas: [
+        {titulo: "Engenharia de Software"}, {titulo: "Teste de Software"}, {titulo: "Qualidade de Software"}
+      ]
+    });
+
     this.perguntas.push({
       titulo: "Para garantir a qualidade e a eficácia do desenvolvimento do projeto, o gerente de projetos deve focar em:",
       nivelDificuldade: this.niveisDificuldade[0],
@@ -78,6 +139,26 @@ export class PerguntaProvider {
       alternativaCorreta: {titulo: "Planos de comunicação"},
       alternativasIncorretas: [
         {titulo: " treinamento"}, {titulo: "Diagrama de rede"}, {titulo: "Engenharia de requisitos"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Qual dos paradigmas abaixo tem análise de riscos como etapa?",
+      nivelDificuldade: this.niveisDificuldade[0],
+      area: this.areas[3],
+      alternativaCorreta: {titulo: "Espiral"},
+      alternativasIncorretas: [
+        {titulo: "Cascata"}, {titulo: "Prototipação"}, {titulo: "Linear"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Conjunto de práticas que servem de guia a um grupo para trabalhar de maneira produtiva:",
+      nivelDificuldade: this.niveisDificuldade[0],
+      area: this.areas[3],
+      alternativaCorreta: {titulo: "Gerência de Projetos"},
+      alternativasIncorretas: [
+        {titulo: "Engenharia de Software"}, {titulo: "Manifesto Ágil"}, {titulo: "Qualidade de Software"}
       ]
     });
 
@@ -108,56 +189,6 @@ export class PerguntaProvider {
       alternativaCorreta: {titulo: "O Modelo de Rede"},
       alternativasIncorretas: [
         {titulo: "O Flowcharting"}, {titulo: "O Nivelamento Heurístico dos Recursos"}, {titulo: "A Medição de Desempenho"}
-      ]
-    });
-
-    this.perguntas.push({
-      titulo: "Qual dos paradigmas abaixo tem análise de riscos como etapa?",
-      nivelDificuldade: this.niveisDificuldade[0],
-      area: this.areas[3],
-      alternativaCorreta: {titulo: "Espiral"},
-      alternativasIncorretas: [
-        {titulo: "Cascata"}, {titulo: "Prototipação"}, {titulo: "Linear"}
-      ]
-    });
-
-    this.perguntas.push({
-      titulo: "Conjunto de práticas que servem de guia a um grupo para trabalhar de maneira produtiva:",
-      nivelDificuldade: this.niveisDificuldade[0],
-      area: this.areas[3],
-      alternativaCorreta: {titulo: "Gerência de Projetos"},
-      alternativasIncorretas: [
-        {titulo: "Engenharia de Software"}, {titulo: "Manifesto Ágil"}, {titulo: "Qualidade de Software"}
-      ]
-    });
-
-    this.perguntas.push({
-      titulo: " Qual dos testes a seguir é realizado em ambientes de laboratório e comumente são executados por funcionários internos que simulam usuários reais, realizando tarefas típicas no aplicativo:",
-      nivelDificuldade: this.niveisDificuldade[2],
-      area: this.areas[4],
-      alternativaCorreta: {titulo: "Teste Alfa"},
-      alternativasIncorretas: [
-        {titulo: "Teste Beta"}, {titulo: "Teste de Regressão"}, {titulo: "Teste Fumaça"}
-      ]
-    });
-
-    this.perguntas.push({
-      titulo: "A fase de elaboração dos testes de software é uma das partes mais importantes, no desenvolvimento de um software.Sobre o teste de caixa branca,assinale a alternativa correta:",
-      nivelDificuldade: this.niveisDificuldade[2],
-      area: this.areas[4],
-      alternativaCorreta: {titulo: "É a utilização de um sistema, para controlar a execução dos testes de um Software"},
-      alternativasIncorretas: [
-        {titulo: "Ferramenta de instalação de Software"}, {titulo: "Tem como principal tarefa, ajudar na concepção do Software"}, {titulo: "É a tarefa executada, pelos analistas de teste, tendo como objetivo descrever os fluxos dos UCs do Sistema"}
-      ]
-    });
-
-    this.perguntas.push({
-      titulo: "Assinale a alternativa correta, sobre automação de teste de software:",
-      nivelDificuldade: this.niveisDificuldade[2],
-      area: this.areas[4],
-      alternativaCorreta: {titulo: "Teste do código fonte, de cada linha de código possível, dos fluxos básicos e dos alternativos"},
-      alternativasIncorretas: [
-        {titulo: "Teste feito pela equipe de testadores de software"}, {titulo: "Teste executado, após a implantação do software"}, {titulo: "Teste feito pelo próprio programador que verifica, se o código que foi construído, é não funcional"}
       ]
     });
 
@@ -218,6 +249,36 @@ export class PerguntaProvider {
       alternativaCorreta: {titulo: "Teste de volatilidade de requisitos"},
       alternativasIncorretas: [
         {titulo: "Teste de validação"}, {titulo: "Teste de integração"}, {titulo: "Teste de unidade"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: " Qual dos testes a seguir é realizado em ambientes de laboratório e comumente são executados por funcionários internos que simulam usuários reais, realizando tarefas típicas no aplicativo:",
+      nivelDificuldade: this.niveisDificuldade[2],
+      area: this.areas[4],
+      alternativaCorreta: {titulo: "Teste Alfa"},
+      alternativasIncorretas: [
+        {titulo: "Teste Beta"}, {titulo: "Teste de Regressão"}, {titulo: "Teste Fumaça"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "A fase de elaboração dos testes de software é uma das partes mais importantes, no desenvolvimento de um software.Sobre o teste de caixa branca,assinale a alternativa correta:",
+      nivelDificuldade: this.niveisDificuldade[2],
+      area: this.areas[4],
+      alternativaCorreta: {titulo: "É a utilização de um sistema, para controlar a execução dos testes de um Software"},
+      alternativasIncorretas: [
+        {titulo: "Ferramenta de instalação de Software"}, {titulo: "Tem como principal tarefa, ajudar na concepção do Software"}, {titulo: "É a tarefa executada, pelos analistas de teste, tendo como objetivo descrever os fluxos dos UCs do Sistema"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Assinale a alternativa correta, sobre automação de teste de software:",
+      nivelDificuldade: this.niveisDificuldade[2],
+      area: this.areas[4],
+      alternativaCorreta: {titulo: "Teste do código fonte, de cada linha de código possível, dos fluxos básicos e dos alternativos"},
+      alternativasIncorretas: [
+        {titulo: "Teste feito pela equipe de testadores de software"}, {titulo: "Teste executado, após a implantação do software"}, {titulo: "Teste feito pelo próprio programador que verifica, se o código que foi construído, é não funcional"}
       ]
     });
 
