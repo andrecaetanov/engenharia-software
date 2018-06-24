@@ -72,6 +72,36 @@ export class PerguntaProvider {
 
   private criarPerguntas() {
     this.perguntas.push({
+      titulo: "Sobre qualidade de software, assinale a alternativa incorreta:",
+      nivelDificuldade: this.niveisDificuldade[2],
+      area: this.areas[1],
+      alternativaCorreta: {titulo: "A definição das metas de qualidade e dos planos de qualidade são atividades contempladas no planejamento dos riscos"},
+      alternativasIncorretas: [
+        {titulo: "A qualidade de um software deve estar em conformidade com especificações e padrões de desenvolvimento"}, {titulo: "Os usuários estão interessados principalmente no uso do software, no seu desempenho, e nos efeitos do uso do software"}, {titulo: "A qualidade de um software se refere não só a padrões de desenvolvimento, mas também garantir que o produto final satisfaça as expectativas do cliente"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Sobre os conceitos de validação e verificação de software, assinale a afirmativa correta:",
+      nivelDificuldade: this.niveisDificuldade[2],
+      area: this.areas[1],
+      alternativaCorreta: {titulo: "A validação tem por objetivo investigar se o software atende os requisitos do usuário, ou seja, se está sendo construído o produto correto"},
+      alternativasIncorretas: [
+        {titulo: "A verificação tem por objetivo investigar se o software atende os requisitos do usuário, ou seja, se está sendo construído o produto correto"}, {titulo: "Validação e/ou verificação são sinônimos que denotam o uso de técnicas para verificar se o software está sendo construído de forma correta"}, {titulo: "Verificação e/ou validação são testes de software realizados pelo SQA"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "De acordo com a norma ISO/IEC 9126, os atributos de qualidade de software referentes às características de usabilidade são:",
+      nivelDificuldade: this.niveisDificuldade[2],
+      area: this.areas[1],
+      alternativaCorreta: {titulo: "Acessibilidade, estética, atratividade, inteligibilidade e apreensibilidade"},
+      alternativasIncorretas: [
+        {titulo: "Estabilidade, testabilidade, utilização de recursos e acessibilidade"}, {titulo: "Inteligibilidade, comportamento com relação ao tempo, atratividade e operacionalidade"}, {titulo: "Segurança de acesso, maturidade, atratividade e adaptabilidade"}
+      ]
+    });
+
+    this.perguntas.push({
       titulo: "Assinale a alternativa que define corretamente aquela característica composta pelas subcaracterísticas Compreensibilidade, Apreensibilidade e  Operacionalidade:",
       nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[1],
