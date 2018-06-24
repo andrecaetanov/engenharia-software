@@ -72,6 +72,66 @@ export class PerguntaProvider {
 
   private criarPerguntas() {
     this.perguntas.push({
+      titulo: "Assinale a alternativa que define corretamente aquela característica composta pelas subcaracterísticas Compreensibilidade, Apreensibilidade e  Operacionalidade:",
+      nivelDificuldade: this.niveisDificuldade[0],
+      area: this.areas[1],
+      alternativaCorreta: {titulo: "Usabilidade"},
+      alternativasIncorretas: [
+        {titulo: "Portabilidade"}, {titulo: "Manutenibilidade"}, {titulo: "Funcionalidade"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Na qualidade de software se o software satisfaz as necessidades. Que característica é essa:",
+      nivelDificuldade: this.niveisDificuldade[0],
+      area: this.areas[1],
+      alternativaCorreta: {titulo: "Funcionalidade"},
+      alternativasIncorretas: [
+        {titulo: "Eficiência"}, {titulo: "Confiabilidade"}, {titulo: "Usabilidade"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Qual das alternativas não é uma característica da qualidade de software:",
+      nivelDificuldade: this.niveisDificuldade[0],
+      area: this.areas[1],
+      alternativaCorreta: {titulo: "Controlabilidade"},
+      alternativasIncorretas: [
+        {titulo: "Funcionalidade"}, {titulo: "Confiabilidade"}, {titulo: "Portabilidade"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Dentre os atributos de um software de qualidade, incluem-se:",
+      nivelDificuldade: this.niveisDificuldade[1],
+      area: this.areas[1],
+      alternativaCorreta: {titulo: "Eficiência, manutenibilidade e usabilidade"},
+      alternativasIncorretas: [
+        {titulo: "Controlabilidade, eficiência e manutenibilidade"}, {titulo: "Eficiência, imutabilidade e manutenibilidade"}, {titulo: "Imutabilidade, manutenibilidade e usabilidade"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "O modelo de processo de avaliação é o processo que pode ser aplicado a cada fase apropriada do ciclo de vida de cada componente de software produto e é constituído por três estágios. Qual das alternativas não é um dos seus estágios:",
+      nivelDificuldade: this.niveisDificuldade[1],
+      area: this.areas[1],
+      alternativaCorreta: {titulo: "Modificabilidade"},
+      alternativasIncorretas: [
+        {titulo: "Definição de Requisitos de Qualidade"}, {titulo: "Preparação da Avaliação"}, {titulo: "Procedimento de Avaliação"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Assinale a alternativa que define corretamente aquela característica composta pelas subcaracterísticas Maturidade, Recuperabilidade e Tolerância a falhas:",
+      nivelDificuldade: this.niveisDificuldade[1],
+      area: this.areas[1],
+      alternativaCorreta: {titulo: "Confiabilidade"},
+      alternativasIncorretas: [
+        {titulo: "Eficiência"}, {titulo: "Usabilidade"}, {titulo: "Funcionalidade"}
+      ]
+    });
+
+    this.perguntas.push({
       titulo: "A engenharia reversa é o processo de análise de um software. Qual das alternativas a seguir não é um elemento da engenharia de reversa:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[2],
