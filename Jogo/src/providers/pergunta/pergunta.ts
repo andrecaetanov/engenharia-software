@@ -71,33 +71,33 @@ export class PerguntaProvider {
   }
 
   private criarPerguntas() {
-    this.perguntas.push({
-      titulo: "Sobre qualidade de software, assinale a alternativa incorreta:",
+    this.perguntas.push({  //MODIFICADA
+      titulo: "A descrição de um produto deve ter informações corretas e testáveis. Esta afirmação representa requisitos de:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[1],
-      alternativaCorreta: {titulo: "A definição das metas de qualidade e dos planos de qualidade são atividades contempladas no planejamento dos riscos"},
+      alternativaCorreta: {titulo: "Qualidade"},
       alternativasIncorretas: [
-        {titulo: "A qualidade de um software deve estar em conformidade com especificações e padrões de desenvolvimento"}, {titulo: "Os usuários estão interessados principalmente no uso do software, no seu desempenho, e nos efeitos do uso do software"}, {titulo: "A qualidade de um software se refere não só a padrões de desenvolvimento, mas também garantir que o produto final satisfaça as expectativas do cliente"}
+        {titulo: "Testabilidade"}, {titulo: "Operacionalidade"}, {titulo: "Garantia"}
       ]
     });
 
-    this.perguntas.push({
-      titulo: "Sobre os conceitos de validação e verificação de software, assinale a afirmativa correta:",
+    this.perguntas.push({  //MODIFICADA
+      titulo: "A ISO 9000 apresenta princípios para a implantação e gestão de um SGQ, qual das alternativas não é um dos seus princípios:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[1],
-      alternativaCorreta: {titulo: "A validação tem por objetivo investigar se o software atende os requisitos do usuário, ou seja, se está sendo construído o produto correto"},
+      alternativaCorreta: {titulo: "Sem abordagem dos processos"},
       alternativasIncorretas: [
-        {titulo: "A verificação tem por objetivo investigar se o software atende os requisitos do usuário, ou seja, se está sendo construído o produto correto"}, {titulo: "Validação e/ou verificação são sinônimos que denotam o uso de técnicas para verificar se o software está sendo construído de forma correta"}, {titulo: "Verificação e/ou validação são testes de software realizados pelo SQA"}
+        {titulo: "Foco no cliente"}, {titulo: "Melhoria contínua"}, {titulo: "Liderança"}
       ]
     });
 
-    this.perguntas.push({
+    this.perguntas.push({ //MODIFICADA
       titulo: "De acordo com a norma ISO/IEC 9126, os atributos de qualidade de software referentes às características de usabilidade são:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[1],
-      alternativaCorreta: {titulo: "Acessibilidade, estética, atratividade, inteligibilidade e apreensibilidade"},
+      alternativaCorreta: {titulo: "Acessibilidade, estética e inteligibilidade"},
       alternativasIncorretas: [
-        {titulo: "Estabilidade, testabilidade, utilização de recursos e acessibilidade"}, {titulo: "Inteligibilidade, comportamento com relação ao tempo, atratividade e operacionalidade"}, {titulo: "Segurança de acesso, maturidade, atratividade e adaptabilidade"}
+        {titulo: "Estabilidade e utilização de recursos"}, {titulo: "Inteligibilidade e utilização de recursos"}, {titulo: "Segurança de acesso e adaptabilidade"}
       ]
     });
 
@@ -131,18 +131,18 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({
+    this.perguntas.push({ //MODIFICADA
       titulo: "Dentre os atributos de um software de qualidade, incluem-se:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[1],
-      alternativaCorreta: {titulo: "Eficiência, manutenibilidade e usabilidade"},
+      alternativaCorreta: {titulo: "Eficiência e usabilidade"},
       alternativasIncorretas: [
-        {titulo: "Controlabilidade, eficiência e manutenibilidade"}, {titulo: "Eficiência, imutabilidade e manutenibilidade"}, {titulo: "Imutabilidade, manutenibilidade e usabilidade"}
+        {titulo: "Controlabilidade e manutenibilidade"}, {titulo: "Eficiência e imutabilidade"}, {titulo: "Imutabilidade e usabilidade"}
       ]
     });
 
-    this.perguntas.push({
-      titulo: "O modelo de processo de avaliação é o processo que pode ser aplicado a cada fase apropriada do ciclo de vida de cada componente de software produto e é constituído por três estágios. Qual das alternativas não é um dos seus estágios:",
+    this.perguntas.push({ //MODIFICADA
+      titulo: "O modelo de processo de avaliação é constituído por três estágios. Qual das alternativas não é um dos seus estágios:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[1],
       alternativaCorreta: {titulo: "Modificabilidade"},
@@ -171,7 +171,7 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({
+    this.perguntas.push({ //Mudar tamanho das alternativas
       titulo: "Sobre manutenção de software, assinale a alternativa incorreta:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[2],
@@ -211,7 +211,7 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({
+    this.perguntas.push({ //Mudar tamanho das alternativas
       titulo: "Sobre manutenção evolutiva, assinale a alternativa incorreta:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[2],
@@ -221,7 +221,7 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({
+    this.perguntas.push({ //Mudar tamanho das alternativas
       titulo: "Sobre os tipos de manutenção de software, assinale a alternativa incorreta:",
       nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[2],
@@ -241,7 +241,7 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({
+    this.perguntas.push({ //Mudar tamanho das alternativas
       titulo: "Sobre manutenção de software, qual das alternativas a seguir é a correta:",
       nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[2],
@@ -251,7 +251,7 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({
+    this.perguntas.push({ //Mudar tamanho das alternativas
       titulo: "Sobre requisitos não funcionais,assinale a alternativa incorreta:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[0],
@@ -261,7 +261,7 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({
+    this.perguntas.push({ //Mudar tamanho das alternativas
       titulo: "Sobre engenharia de requisitos, assinale a alternativa correta:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[0],
@@ -271,7 +271,7 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({
+    this.perguntas.push({ //Mudar tamanho das alternativas
       titulo: "O levantamento de requisitos é o começo de todo desenvolvimento de software, sendo essa atividade repetida em todas as demais etapas da engenharia de requisitos. Sobre essa atividade e suas técnicas assinale a alternativa incorreta:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[0],
@@ -311,7 +311,7 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({
+    this.perguntas.push({ //Mudar tamanho das alternativas
       titulo: "Qual processo de engenharia de requisitos é composto por quatro atividades de alto nível:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[0],
@@ -471,7 +471,7 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({
+    this.perguntas.push({ //Mudar tamanho das alternativas e tamannho da pergunta
       titulo: "A fase de elaboração dos testes de software é uma das partes mais importantes, no desenvolvimento de um software.Sobre o teste de caixa branca,assinale a alternativa correta:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[4],
@@ -481,7 +481,7 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({
+    this.perguntas.push({ //Mudar tamanho das alternativas
       titulo: "Assinale a alternativa correta, sobre automação de teste de software:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[4],
