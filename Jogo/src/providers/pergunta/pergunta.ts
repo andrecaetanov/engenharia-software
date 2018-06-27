@@ -246,38 +246,39 @@ export class PerguntaProvider {
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[2],
       alternativaCorreta: {titulo: "Perfectiva"},
+
       alternativasIncorretas: [
         {titulo: "Corretiva"}, {titulo: "Adaptativa"}, {titulo: "Preventiva"}
       ]
     });
 
-    this.perguntas.push({ //Mudar tamanho das alternativas
-      titulo: "Sobre requisitos não funcionais,assinale a alternativa incorreta:",
+    this.perguntas.push({
+      titulo: "Qual das alternativas não é uma fase da técnica JAD:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[0],
-      alternativaCorreta: {titulo: "É fácil estimar prazo/esforço/custo para implementação"},
+      alternativaCorreta: {titulo: "Sessão SRG"},
       alternativasIncorretas: [
-        {titulo: "Trata-se de algo que não é uma funcionalidade, mas que precisa ser realizado para que o software atenda seu propósito"}, {titulo: "Requisitos não funcionais são tão importantes quanto os requisitos funcionais ou regras de negócio"}, {titulo: "Requisitos não funcionais incluem atributos de qualidade para o produto"}
+        {titulo: "Preparação"}, {titulo: "Definição"}, {titulo: "Pesquisa"}
       ]
     });
 
-    this.perguntas.push({ //Mudar tamanho das alternativas
-      titulo: "Sobre engenharia de requisitos, assinale a alternativa correta:",
+    this.perguntas.push({
+      titulo: "Sobre uma das definições de gerência de requisitos, assinale a alternativa correta:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[0],
-      alternativaCorreta: {titulo: "Requisitos de software são descobertos por meio de um processo chamado elicitação"},
+      alternativaCorreta: {titulo: "Rastreabilidade"},
       alternativasIncorretas: [
-        {titulo: "Em processos ágeis de desenvolvimento de software, os requisitos devem ser definidos em detalhes no início do projeto"}, {titulo: "A validação de requisitos consiste no teste dos requisitos implementados no software em funcionamento"}, {titulo: " Requisitos não funcionais descrevem o que um software não deve fazer"}
+        {titulo: "Validação"}, {titulo: "Verificação"}, {titulo: "Registro"}
       ]
     });
 
-    this.perguntas.push({ //Mudar tamanho das alternativas
-      titulo: "O levantamento de requisitos é o começo de todo desenvolvimento de software, sendo essa atividade repetida em todas as demais etapas da engenharia de requisitos. Sobre essa atividade e suas técnicas assinale a alternativa incorreta:",
+    this.perguntas.push({
+      titulo: "Qual das alternativas a seguir não é um fator crítico na engenharia de requisitos:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[0],
-      alternativaCorreta: {titulo: "A etnografia é uma técnica de conversação que pode ser utilizada para compreender os requisitos sociais e organizacionais"},
+      alternativaCorreta: {titulo: "Apoio Executivo"},
       alternativasIncorretas: [
-        {titulo: "Algumas das razões para o baixo grau de satisfação dos usuários para os sistemas destacam-se a fase de levantamento de requisitos do projeto"}, {titulo: "As técnicas de levantamento de requisitos têm por objetivo superar as dificuldades relativas a esta fase"}, {titulo: "Workshops trata-se de uma técnica de elicitação em grupo usada em uma reunião estruturada"}
+        {titulo: "Requisitos incompletos"}, {titulo: "Falta de Recursos"}, {titulo: "Expectativas Irreais"}
       ]
     });
 
@@ -292,7 +293,7 @@ export class PerguntaProvider {
     });
 
     this.perguntas.push({
-      titulo: "Qual atividade da engenharia de requisitos visa demonstrar que o documento de requisitos produzido corresponde, de fato, ao sistema que o cliente pretende:",
+      titulo: "Qual atividade da engenharia de requisitos visa demonstrar que os requisitos produzidos correspondem ao sistema que o cliente pretende:",
       nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[0],
       alternativaCorreta: {titulo: "Validação"},
@@ -311,13 +312,13 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({ //Mudar tamanho das alternativas
-      titulo: "Qual processo de engenharia de requisitos é composto por quatro atividades de alto nível:",
+    this.perguntas.push({
+      titulo: "Qual das alternativas a seguir não é um dos principais objetivos da engenharia de requisitos:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[0],
-      alternativaCorreta: {titulo: "Levantamento, análise e negociação, especificação e documentação, validação"},
+      alternativaCorreta: {titulo: "Falta de planejamento"},
       alternativasIncorretas: [
-        {titulo: "Preparação, especificação e documentação, afirmação e implantação"}, {titulo: "Levantamento e preparação, investigação, viabilidade, confirmação"}, {titulo: "Identificação, planejamento, atribuição, validação"}
+        {titulo: "Produtividade na operação"}, {titulo: "Produtividade no desenvolvimento"}, {titulo: "Qualidade de software"}
       ]
     });
 
@@ -371,7 +372,7 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({
+    this.perguntas.push({ //alterar tamanho da pergunta
       titulo: "Seu objetivo é a otimização do retorno sobre o investimento aplicado no decorrer dos projetos e em completa sintonia com as metas e articulações estratégicas do empreendimento. Essa informação se refere ao:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[3],
