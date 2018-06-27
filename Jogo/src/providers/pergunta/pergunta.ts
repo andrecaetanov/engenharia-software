@@ -71,7 +71,7 @@ export class PerguntaProvider {
   }
 
   private criarPerguntas() {
-    this.perguntas.push({  //MODIFICADA
+    this.perguntas.push({
       titulo: "A descrição de um produto deve ter informações corretas e testáveis. Esta afirmação representa requisitos de:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[1],
@@ -81,7 +81,7 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({  //MODIFICADA
+    this.perguntas.push({
       titulo: "A ISO 9000 apresenta princípios para a implantação e gestão de um SGQ, qual das alternativas não é um dos seus princípios:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[1],
@@ -91,7 +91,7 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({ //MODIFICADA
+    this.perguntas.push({
       titulo: "De acordo com a norma ISO/IEC 9126, os atributos de qualidade de software referentes às características de usabilidade são:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[1],
@@ -131,7 +131,7 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({ //MODIFICADA
+    this.perguntas.push({
       titulo: "Dentre os atributos de um software de qualidade, incluem-se:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[1],
@@ -141,7 +141,7 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({ //MODIFICADA
+    this.perguntas.push({
       titulo: "O modelo de processo de avaliação é constituído por três estágios. Qual das alternativas não é um dos seus estágios:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[1],
@@ -171,19 +171,19 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({ //Mudar tamanho das alternativas
-      titulo: "Sobre manutenção de software, assinale a alternativa incorreta:",
+    this.perguntas.push({
+      titulo: "Esse tipo de manutenção faz alterações no software buscando melhorar a confiabilidade, assinale a alternativa correta:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[2],
-      alternativaCorreta: {titulo: "A manutenibilidade deve ser considerada em apenas um nível do processo de revisão da engenharia de software"},
+      alternativaCorreta: {titulo: "Manutenção preventiva"},
       alternativasIncorretas: [
-        {titulo: "A maioria dos problemas com a manutenção de software é causada por deficiência na maneira como o software foi desenvolvido e planejado"}, {titulo: "A engenharia reversa trata-se de um processo para obter especificações do sistema através de uma profunda análise, compreensão do sistema existente"}, {titulo: "A manutenibilidade pode ser definida qualitativamente como a facilidade com que o software pode ser entendido, corrigido, adaptado e ou melhorado"}
+        {titulo: "Manutenção perfectiva"}, {titulo: "Manutenção evolutiva"}, {titulo: "Manutenção corretiva"}
       ]
     });
 
     this.perguntas.push({
       titulo: "Qual das alternativas a seguir não é um tipo de manutenção de software:",
-      nivelDificuldade: this.niveisDificuldade[2],
+      nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[2],
       alternativaCorreta: {titulo: "Manutenção de melhorias"},
       alternativasIncorretas: [
@@ -211,23 +211,23 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({ //Mudar tamanho das alternativas
+    this.perguntas.push({
       titulo: "Sobre manutenção evolutiva, assinale a alternativa incorreta:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[2],
-      alternativaCorreta: {titulo: "Modificações previstas no documento de requisitos original do software"},
+      alternativaCorreta: {titulo: "Não serve para modificar funcionalidades"},
       alternativasIncorretas: [
-        {titulo: "Tem por intuito melhorar a qualidade do software"}, {titulo: "Acrescenta novas funcionalidades"}, {titulo: "Modifica o código-fonte buscando obter melhor legibilidade"}
+        {titulo: "Melhora a qualidade do software"}, {titulo: "Acrescenta novas funcionalidades"}, {titulo: "Melhora o desempenho do software"}
       ]
     });
 
-    this.perguntas.push({ //Mudar tamanho das alternativas
-      titulo: "Sobre os tipos de manutenção de software, assinale a alternativa incorreta:",
+    this.perguntas.push({
+      titulo: "A fase caracterizada  pela realização de alterações de naturezas diversas, como corrigir erros e alterar funções, denomina-se fase de:",
       nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[2],
-      alternativaCorreta: {titulo: "Manutenção de melhorias acomoda mudanças no ambiente ou nas necessidades do usuário"},
+      alternativaCorreta: {titulo: "Manutenção"},
       alternativasIncorretas: [
-        {titulo: "Manutenção perfectiva adiciona novas funcionalidades"}, {titulo: "Manutenção evolutiva oferece uma estrutura melhor para futuras manutenções"}, {titulo: "Manutenção corretiva faz a correção de erros no software que não foram identificados na fase teste"}
+        {titulo: "Testes"}, {titulo: "Desenvolvimento"}, {titulo: "Definição"}
       ]
     });
 
@@ -241,13 +241,13 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({ //Mudar tamanho das alternativas
-      titulo: "Sobre manutenção de software, qual das alternativas a seguir é a correta:",
-      nivelDificuldade: this.niveisDificuldade[0],
+    this.perguntas.push({
+      titulo: "O tipo de manutenção que é realizada visando ao aprimoramento do software para além dos requisitos funcionais originais é conhecido como:",
+      nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[2],
-      alternativaCorreta: {titulo: "É o processo de melhoria e otimização de um software já desenvolvido, como também reparo de defeitos"},
+      alternativaCorreta: {titulo: "Perfectiva"},
       alternativasIncorretas: [
-        {titulo: "A manutenção perfectiva procura por erros que ninguém achou"}, {titulo: "Os tipos de manutenção de software são preventiva, adaptativa, de melhorias e corretiva"}, {titulo: "Uma das suas técnicas é separação dinâmica, a qual é usada para identificar todos os códigos de programa que são afetados por alguma variável"}
+        {titulo: "Corretiva"}, {titulo: "Adaptativa"}, {titulo: "Preventiva"}
       ]
     });
 
