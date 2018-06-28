@@ -89,19 +89,26 @@ export class PerguntaPage {
 
   usarSopro() {
     if (!this.usouSopro) {
-      /*this.usouSopro = true;
-      let porcentagem = 100;
+      this.usouSopro = true;
+      let porcentagemRestante = 100;
+      let contador = 1;
+      let alternativasAuxiliar = this.alternativas.slice(0);
+      shuffle(alternativasAuxiliar);
 
-      this.alternativas.forEach(alternativa => {
-        if (alternativa.titulo == this.perguntaAtual.alternativaCorreta.titulo) {
-          alternativa.porcentagemSopro = Math.floor(Math.random() * (porcentagem - porcentagem*0.4)) + 20;
+      alternativasAuxiliar.forEach(alternativa => {
+        if (contador == 4) {
+          alternativa.porcentagemSopro = porcentagemRestante;
+        }
+        else if (alternativa.titulo == this.perguntaAtual.alternativaCorreta.titulo) {
+          alternativa.porcentagemSopro = Math.floor(Math.random() * (50 - 25)) + 25;
         }
         else {
-          alternativa.porcentagemSopro = Math.floor(Math.random() * (porcentagem - porcentagem*0.75)) + 5;
+          alternativa.porcentagemSopro = Math.floor(Math.random() * (30 - 15)) + 15;
         }
 
-        porcentagem = porcentagem - alternativa.porcentagemSopro;
-      });*/
+        porcentagemRestante = porcentagemRestante - alternativa.porcentagemSopro;
+        contador++;
+      });
     }
   }
 }
