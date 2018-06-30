@@ -72,6 +72,36 @@ export class PerguntaProvider {
 
   private criarPerguntas() {
     this.perguntas.push({
+      titulo: "A atividade Iniciar Projeto é realizada após a aprovação do artefato:",
+      nivelDificuldade: this.niveisDificuldade[2],
+      area: this.areas[3],
+      alternativaCorreta: {titulo: "Caso de negócio"},
+      alternativasIncorretas: [
+        {titulo: "Lista de risco"}, {titulo: "Plano de interação"}, {titulo: "Plano de desenvolvimento"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Em qual estrutura é definida as entregas do projeto e sua decomposição em pacotes de trabalho:",
+      nivelDificuldade: this.niveisDificuldade[2],
+      area: this.areas[3],
+      alternativaCorreta: {titulo: "EAP do projeto"},
+      alternativasIncorretas: [
+        {titulo: "Pacote de trabalho"}, {titulo: "Relatório da APF"}, {titulo: "Estimativa do sistema"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Que técnica permite ver todos os resultados possíveis de suas decisões e avaliar o impacto em termos de risco:",
+      nivelDificuldade: this.niveisDificuldade[2],
+      area: this.areas[3],
+      alternativaCorreta: {titulo: "Monte Carlo"},
+      alternativasIncorretas: [
+        {titulo: "Algoritmo de Dijkstra"}, {titulo: "BPM"}, {titulo: "BAM"}
+      ]
+    });
+
+    this.perguntas.push({
       titulo: "A descrição de um produto deve ter informações corretas e testáveis. Esta afirmação representa requisitos de:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[1],
@@ -92,12 +122,12 @@ export class PerguntaProvider {
     });
 
     this.perguntas.push({
-      titulo: "De acordo com a norma ISO/IEC 9126, os atributos de qualidade de software referentes às características de usabilidade são:",
+      titulo: "Assinale a alternativa que define corretamente aquela característica composta pelas subcaracterísticas acurácia, adequação e interoperabilidade:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[1],
-      alternativaCorreta: {titulo: "Acessibilidade, estética e inteligibilidade"},
+      alternativaCorreta: {titulo: "Funcionalidade"},
       alternativasIncorretas: [
-        {titulo: "Estabilidade e utilização de recursos"}, {titulo: "Inteligibilidade e utilização de recursos"}, {titulo: "Segurança de acesso e adaptabilidade"}
+        {titulo: "Eficiência"}, {titulo: "Portabilidade"}, {titulo: "Manutenibilidade"}
       ]
     });
 
@@ -107,7 +137,7 @@ export class PerguntaProvider {
       area: this.areas[1],
       alternativaCorreta: {titulo: "Usabilidade"},
       alternativasIncorretas: [
-        {titulo: "Portabilidade"}, {titulo: "Manutenibilidade"}, {titulo: "Funcionalidade"}
+        {titulo: "Portabilidade"}, {titulo: "Manutenibilidade"}, {titulo: "Controlabilidade"}
       ]
     });
 
@@ -137,7 +167,7 @@ export class PerguntaProvider {
       area: this.areas[1],
       alternativaCorreta: {titulo: "Eficiência e usabilidade"},
       alternativasIncorretas: [
-        {titulo: "Controlabilidade e manutenibilidade"}, {titulo: "Eficiência e imutabilidade"}, {titulo: "Imutabilidade e usabilidade"}
+        {titulo: "Imutabilidade e manutenibilidade"}, {titulo: "Eficiência e imutabilidade"}, {titulo: "Imutabilidade e usabilidade"}
       ]
     });
 
@@ -147,7 +177,7 @@ export class PerguntaProvider {
       area: this.areas[1],
       alternativaCorreta: {titulo: "Modificabilidade"},
       alternativasIncorretas: [
-        {titulo: "Definição de Requisitos de Qualidade"}, {titulo: "Preparação da Avaliação"}, {titulo: "Procedimento de Avaliação"}
+        {titulo: "Ter de Requisitos de Qualidade"}, {titulo: "Preparação da Avaliação"}, {titulo: "Procedimento de Avaliação"}
       ]
     });
 
@@ -165,7 +195,7 @@ export class PerguntaProvider {
       titulo: "A engenharia reversa é o processo de análise de um software. Qual das alternativas a seguir não é um elemento da engenharia de reversa:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[2],
-      alternativaCorreta: {titulo: "Confiabilidade"},
+      alternativaCorreta: {titulo: "Usabilidade"},
       alternativasIncorretas: [
         {titulo: "Direcionalidade"}, {titulo: "Nível de abstração"}, {titulo: "Completitude do processo"}
       ]
@@ -212,12 +242,12 @@ export class PerguntaProvider {
     });
 
     this.perguntas.push({
-      titulo: "Sobre manutenção evolutiva, assinale a alternativa incorreta:",
+      titulo: "Sobre o uso da manutenção evolutiva no software, assinale a alternativa incorreta:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[2],
-      alternativaCorreta: {titulo: "Não serve para modificar funcionalidades"},
+      alternativaCorreta: {titulo: "Nível de abstração"},
       alternativasIncorretas: [
-        {titulo: "Melhora a qualidade do software"}, {titulo: "Acrescenta novas funcionalidades"}, {titulo: "Melhora o desempenho do software"}
+        {titulo: "Melhora a qualidade"}, {titulo: "Adiciona novas funcionalidades"}, {titulo: "Melhora o desempenho "}
       ]
     });
 
@@ -298,17 +328,17 @@ export class PerguntaProvider {
       area: this.areas[0],
       alternativaCorreta: {titulo: "Validação"},
       alternativasIncorretas: [
-        {titulo: "Análise de viabilidade"}, {titulo: "Construção"}, {titulo: "Elaboração do Termo de Abertura"}
+        {titulo: "Análise de viabilidade"}, {titulo: "Construção"}, {titulo: "Verificação"}
       ]
     });
 
     this.perguntas.push({
-      titulo: "A descrição de produtos deve conter informações que sejam testáveis e corretas. Essa afirmativa representa requisitos de:",
+      titulo: "Pode variar de uma declaração abstrata de alto nível de um serviço ou de uma restrição do sistema para uma especificação matemática funcional:",
       nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[0],
-      alternativaCorreta: {titulo: "Qualidade"},
+      alternativaCorreta: {titulo: "Requisito"},
       alternativasIncorretas: [
-        {titulo: "Testabilidade"}, {titulo: "Garantia"}, {titulo: "Processos"}
+        {titulo: "Variável de Seção"}, {titulo: "Função Abstrata"}, {titulo: "Polimorfismo"}
       ]
     });
 
@@ -318,7 +348,7 @@ export class PerguntaProvider {
       area: this.areas[0],
       alternativaCorreta: {titulo: "Falta de planejamento"},
       alternativasIncorretas: [
-        {titulo: "Produtividade na operação"}, {titulo: "Produtividade no desenvolvimento"}, {titulo: "Qualidade de software"}
+        {titulo: "Produtividade na operação"}, {titulo: "Produtividade no projeto"}, {titulo: "Qualidade de software"}
       ]
     });
 
@@ -372,18 +402,18 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({ //alterar tamanho da pergunta
-      titulo: "Seu objetivo é a otimização do retorno sobre o investimento aplicado no decorrer dos projetos e em completa sintonia com as metas e articulações estratégicas do empreendimento. Essa informação se refere ao:",
+    this.perguntas.push({
+      titulo: "Seu objetivo é a otimização do retorno sobre o investimento aplicado no decorrer dos projetos. Essa informação se refere a:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[3],
-      alternativaCorreta: {titulo: "Gerenciamento de Portfólios de Projetos"},
+      alternativaCorreta: {titulo: "Gerência de Portfólios"},
       alternativasIncorretas: [
-        {titulo: "Análise de riscos"}, {titulo: "Gerenciamento Integrado de Projetos"}, {titulo: "Gerenciamento Total da Qualidade"}
+        {titulo: "Análise de riscos"}, {titulo: "Gerência Integrada de Projetos"}, {titulo: "Gerência Total da Qualidade"}
       ]
     });
 
     this.perguntas.push({
-      titulo: "Esse documento pode conter a necessidade do negócio, a definição do produto, o nome do gerente e a justificativa da importância do projeto. É o documento que autoriza formalmente o projeto. Esse  documento é chamado de:",
+      titulo: "É o documento que autoriza formalmente o projeto. Esse  documento é chamado de:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[3],
       alternativaCorreta: {titulo: "Project Charter"},
@@ -393,27 +423,27 @@ export class PerguntaProvider {
     });
 
     this.perguntas.push({
-      titulo: "Composto de uma estrutura mais completa, possui as propriedades básicas de registros, conjuntos e ocorrências, e utiliza a linguagem de definição e a linguagem de manipulação de dados. As características mencionadas se referem o(a):",
+      titulo: "Possui as propriedades básicas de registros, conjuntos e ocorrências. As características mencionadas se referem o(a):",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[3],
       alternativaCorreta: {titulo: "O Modelo de Rede"},
       alternativasIncorretas: [
-        {titulo: "O Flowcharting"}, {titulo: "O Nivelamento Heurístico dos Recursos"}, {titulo: "A Medição de Desempenho"}
+        {titulo: "O Flowcharting"}, {titulo: "O Heurístico dos Recursos"}, {titulo: "A Medição de Desempenho"}
       ]
     });
 
     this.perguntas.push({
-      titulo: "Além das atividades de inspeção de software, outras atividades de suma importância no contexto do processo de verificação e validação são aquelas relacionadas:",
+      titulo: "Além das atividades de inspeção de software, possui outras atividades no contexto do processo de verificação e validação são aquelas relacionadas:",
       nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[4],
       alternativaCorreta: {titulo: "Teste de software"},
       alternativasIncorretas: [
-        {titulo: "Manutenção de software"}, {titulo: "Estimativa de custo de software"}, {titulo: "Gerenciamento de configuração de software"}
+        {titulo: "Manutenção de software"}, {titulo: "Estimativa de custo"}, {titulo: "Gerência de configuração"}
       ]
     });
 
     this.perguntas.push({
-      titulo: "Os testes de software são executados, usando os procedimentos e documentos de script de teste. Para que a fase de execução de teste, seja realizada com sucesso deve(m) ser executado(s):",
+      titulo: "Para que a fase de execução de teste, seja realizada com sucesso deve(m) ser executado(s):",
       nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[4],
       alternativaCorreta: {titulo: "Casos de teste"},
@@ -422,8 +452,8 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({
-      titulo: "Qual a técnica de teste que consiste em se aplicar, a cada nova versão do software ou a cada ciclo, todos os testes que já foram aplicados nas versões ou ciclos de teste anteriores do sistema:",
+    this.perguntas.push({ //mudar pergunta
+      titulo: "Qual a técnica de teste que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos:",
       nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[4],
       alternativaCorreta: {titulo: "Regressão"},
@@ -433,7 +463,7 @@ export class PerguntaProvider {
     });
 
     this.perguntas.push({
-      titulo: "Qual dos testes a seguir pode ser classificada em alguns dos itens como stress, execução, operação, compliance, segurança, recuperação contingência e também é conhecido como teste da caixa branca:",
+      titulo: "Qual dos testes a seguir pode ser classificada em alguns dos itens como stress, execução, operação e também é conhecido como teste da caixa branca:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[4],
       alternativaCorreta: {titulo: "Estrutural"},
@@ -443,7 +473,7 @@ export class PerguntaProvider {
     });
 
     this.perguntas.push({
-      titulo: "Foram detectados problemas no sistema como data de nascimento preenchida com data futura, campos de preenchimento obrigatório que não são validados, botões que não executam as ações devidas. Esses problemas são rastreados por esse tipo de teste também conhecido de teste funcional:",
+      titulo: "Qual teste é conhecido como teste funcional, pois é baseado nos requisitos funcionais do software:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[4],
       alternativaCorreta: {titulo: "Caixa preta"},
@@ -456,14 +486,14 @@ export class PerguntaProvider {
       titulo: "Assinale a alternativa que não corresponde a um dos testes de software,realizados em softwares comerciais:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[4],
-      alternativaCorreta: {titulo: "Teste de volatilidade de requisitos"},
+      alternativaCorreta: {titulo: "Teste de volatilidade"},
       alternativasIncorretas: [
         {titulo: "Teste de validação"}, {titulo: "Teste de integração"}, {titulo: "Teste de unidade"}
       ]
     });
 
     this.perguntas.push({
-      titulo: " Qual dos testes a seguir é realizado em ambientes de laboratório e comumente são executados por funcionários internos que simulam usuários reais, realizando tarefas típicas no aplicativo:",
+      titulo: " Qual dos testes a seguir é realizado no período entre o término do desenvolvimento e a entrega:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[4],
       alternativaCorreta: {titulo: "Teste Alfa"},
@@ -472,54 +502,28 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({ //Mudar tamanho das alternativas e tamannho da pergunta
-      titulo: "A fase de elaboração dos testes de software é uma das partes mais importantes, no desenvolvimento de um software.Sobre o teste de caixa branca,assinale a alternativa correta:",
+    this.perguntas.push({
+      titulo: "A análise estática de código pode ter sua verificação agrupada em três aspectos principais,assinale a alternativa incorreta:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[4],
-      alternativaCorreta: {titulo: "É a utilização de um sistema, para controlar a execução dos testes de um Software"},
+      alternativaCorreta: {titulo: "Verificação por log"},
       alternativasIncorretas: [
-        {titulo: "Ferramenta de instalação de Software"}, {titulo: "Tem como principal tarefa, ajudar na concepção do Software"}, {titulo: "É a tarefa executada, pelos analistas de teste, tendo como objetivo descrever os fluxos dos UCs do Sistema"}
+        {titulo: "Verificação por estilo"}, {titulo: "Verificação por boas práticas"}, {titulo: "Verificação por bugs"}
       ]
     });
 
-    this.perguntas.push({ //Mudar tamanho das alternativas
-      titulo: "Assinale a alternativa correta, sobre automação de teste de software:",
+    this.perguntas.push({
+      titulo: "É a fase do teste de software em que módulos são combinados e testados em grupo. Que teste a seguir tem essa fase:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[4],
-      alternativaCorreta: {titulo: "Teste do código fonte, de cada linha de código possível, dos fluxos básicos e dos alternativos"},
+      alternativaCorreta: {titulo: "Teste de integração"},
       alternativasIncorretas: [
-        {titulo: "Teste feito pela equipe de testadores de software"}, {titulo: "Teste executado, após a implantação do software"}, {titulo: "Teste feito pelo próprio programador que verifica, se o código que foi construído, é não funcional"}
+        {titulo: "Teste de unidade"}, {titulo: "Teste de sistema"}, {titulo: "Teste de aceitação"}
       ]
     });
 
-    this.perguntas.push({
-      titulo: "Pode variar de uma declaração abstrata de alto nível de um serviço ou de uma restrição do sistema para uma especificação matemática funcional:",
-      nivelDificuldade: this.niveisDificuldade[2],
-      area: this.areas[0],
-      alternativaCorreta: {titulo: "Requisito"},
-      alternativasIncorretas: [
-        {titulo: "Variável de Seção"}, {titulo: "Função Abstrata"}, {titulo: "Polimorfismo"}
-      ]
-    });
 
-    this.perguntas.push({
-      titulo: "Processo que estabelece os serviços que o cliente necessita do sistema e as restrições sob as quais ele opera e é desenvolvido:",
-      nivelDificuldade: this.niveisDificuldade[1],
-      area: this.areas[0],
-      alternativaCorreta: {titulo: "Engenharia de Requisitos"},
-      alternativasIncorretas: [
-        {titulo: "Engenharia de Software"}, {titulo: "Teste de Software"}, {titulo: "Qualidade de Software"}
-      ]
-    });
 
-    this.perguntas.push({
-      titulo: "A descrição de produtos deve conter informações que sejam testáveis e corretas. Essa afirmativa representa requisitos de:",
-      nivelDificuldade: this.niveisDificuldade[1],
-      area: this.areas[0],
-      alternativaCorreta: {titulo: "Qualidade"},
-      alternativasIncorretas: [
-        {titulo: "Testabilidade"}, {titulo: "Garantia"}, {titulo: "Processos"}
-      ]
-    });
+
   }
 }
