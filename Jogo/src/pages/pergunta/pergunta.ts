@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Pergunta } from '../../models/pergunta';
 import shuffle from 'shuffle-array';
+import { NativeAudio } from '@ionic-native/native-audio';
 
 const TOTAL_PERGUNTAS = 45;
 
@@ -24,12 +25,14 @@ export class PerguntaPage {
   public usouSopro = false;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private perguntaProvider: PerguntaProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private perguntaProvider: PerguntaProvider,  private nativeAudio: NativeAudio) {
     this.sortearAlternativas();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PerguntaPage');
+    this.nativeAudio.preloadSimple('resposta_errada', 'assets/audios/resposta_errada.mp3');
+    this.nativeAudio.preloadSimple('aplausos', 'assets/audios/aplausos.mp3');
   }
 
   retornarParaMenu() {
@@ -39,12 +42,14 @@ export class PerguntaPage {
   verificarResposta(alternativa: Alternativa) {
     if (this.indicePergunta < TOTAL_PERGUNTAS) {
       if (alternativa.titulo == this.perguntaAtual.alternativaCorreta.titulo) {
+        this.nativeAudio.play('aplausos');
         this.indicePergunta++;
         this.perguntaAtual = this.perguntas[this.indicePergunta];
         this.sortearAlternativas();
         this.pontuacao = this.pontuacao * 2;
       }
       else {
+        this.nativeAudio.play('resposta_errada');
         this.retornarParaMenu();
       }
     }
