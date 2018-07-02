@@ -1,3 +1,4 @@
+import { ResultadoPage } from './../pages/resultado/resultado';
 import { PerguntaPage } from './../pages/pergunta/pergunta';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -27,6 +28,7 @@ import { RegistroPage } from '../pages/registro/registro';
     OpcoesPage,
     LoginPage,
     RegistroPage,
+    ResultadoPage,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +46,7 @@ import { RegistroPage } from '../pages/registro/registro';
     OpcoesPage,
     LoginPage,
     RegistroPage,
+    ResultadoPage,
   ],
   providers: [
     StatusBar,

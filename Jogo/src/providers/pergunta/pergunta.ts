@@ -25,7 +25,6 @@ export class PerguntaProvider {
   }
 
   public getPerguntasPorDificuldade(dificuldade: string) {
-    console.log(dificuldade);
     let perguntasAleatorias: Pergunta[] = new Array();
     let contadorEngenhariaRequisitos = 0;
     let contadorQualidadeSoftware = 0;
@@ -64,7 +63,6 @@ export class PerguntaProvider {
       }
     });
 
-    console.log(perguntasAleatorias);
     return perguntasAleatorias;
   }
 

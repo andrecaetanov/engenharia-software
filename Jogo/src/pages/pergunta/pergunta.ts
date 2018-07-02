@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Pergunta } from '../../models/pergunta';
 import shuffle from 'shuffle-array';
+import { ResultadoPage } from '../resultado/resultado';
 
 const TOTAL_PERGUNTAS = 15;
 
@@ -50,9 +51,19 @@ export class PerguntaPage {
         this.pontuacao = this.pontuacao * 2;
       }
       else {
-        this.retornarParaMenu();
+        this.acessarResultado();
       }
     }
+    else {
+      this.acessarResultado();
+    }
+  }
+
+  acessarResultado() {
+    this.navCtrl.push(ResultadoPage, {
+      pontuacao: this.pontuacao,
+      dificuldade: this.dificuldade
+    })
   }
 
   sortearAlternativas() {
