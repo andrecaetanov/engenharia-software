@@ -72,32 +72,62 @@ export class PerguntaProvider {
 
   private criarPerguntas() {
     this.perguntas.push({
-      titulo: "Sobre qualidade de software, assinale a alternativa incorreta:",
+      titulo: "A atividade Iniciar Projeto é realizada após a aprovação do artefato:",
       nivelDificuldade: this.niveisDificuldade[2],
-      area: this.areas[1],
-      alternativaCorreta: {titulo: "A definição das metas de qualidade e dos planos de qualidade são atividades contempladas no planejamento dos riscos"},
+      area: this.areas[3],
+      alternativaCorreta: {titulo: "Caso de negócio"},
       alternativasIncorretas: [
-        {titulo: "A qualidade de um software deve estar em conformidade com especificações e padrões de desenvolvimento"}, {titulo: "Os usuários estão interessados principalmente no uso do software, no seu desempenho, e nos efeitos do uso do software"}, {titulo: "A qualidade de um software se refere não só a padrões de desenvolvimento, mas também garantir que o produto final satisfaça as expectativas do cliente"}
+        {titulo: "Lista de risco"}, {titulo: "Plano de interação"}, {titulo: "Plano de desenvolvimento"}
       ]
     });
 
     this.perguntas.push({
-      titulo: "Sobre os conceitos de validação e verificação de software, assinale a afirmativa correta:",
+      titulo: "Em qual estrutura é definida as entregas do projeto e sua decomposição em pacotes de trabalho:",
       nivelDificuldade: this.niveisDificuldade[2],
-      area: this.areas[1],
-      alternativaCorreta: {titulo: "A validação tem por objetivo investigar se o software atende os requisitos do usuário, ou seja, se está sendo construído o produto correto"},
+      area: this.areas[3],
+      alternativaCorreta: {titulo: "EAP do projeto"},
       alternativasIncorretas: [
-        {titulo: "A verificação tem por objetivo investigar se o software atende os requisitos do usuário, ou seja, se está sendo construído o produto correto"}, {titulo: "Validação e/ou verificação são sinônimos que denotam o uso de técnicas para verificar se o software está sendo construído de forma correta"}, {titulo: "Verificação e/ou validação são testes de software realizados pelo SQA"}
+        {titulo: "Pacote de trabalho"}, {titulo: "Relatório da APF"}, {titulo: "Estimativa do sistema"}
       ]
     });
 
     this.perguntas.push({
-      titulo: "De acordo com a norma ISO/IEC 9126, os atributos de qualidade de software referentes às características de usabilidade são:",
+      titulo: "Que técnica permite ver todos os resultados possíveis de suas decisões e avaliar o impacto em termos de risco:",
+      nivelDificuldade: this.niveisDificuldade[2],
+      area: this.areas[3],
+      alternativaCorreta: {titulo: "Monte Carlo"},
+      alternativasIncorretas: [
+        {titulo: "Algoritmo de Dijkstra"}, {titulo: "BPM"}, {titulo: "BAM"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "A descrição de um produto deve ter informações corretas e testáveis. Esta afirmação representa requisitos de:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[1],
-      alternativaCorreta: {titulo: "Acessibilidade, estética, atratividade, inteligibilidade e apreensibilidade"},
+      alternativaCorreta: {titulo: "Qualidade"},
       alternativasIncorretas: [
-        {titulo: "Estabilidade, testabilidade, utilização de recursos e acessibilidade"}, {titulo: "Inteligibilidade, comportamento com relação ao tempo, atratividade e operacionalidade"}, {titulo: "Segurança de acesso, maturidade, atratividade e adaptabilidade"}
+        {titulo: "Testabilidade"}, {titulo: "Operacionalidade"}, {titulo: "Garantia"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "A ISO 9000 apresenta princípios para a implantação e gestão de um SGQ, qual das alternativas não é um dos seus princípios:",
+      nivelDificuldade: this.niveisDificuldade[2],
+      area: this.areas[1],
+      alternativaCorreta: {titulo: "Sem abordagem dos processos"},
+      alternativasIncorretas: [
+        {titulo: "Foco no cliente"}, {titulo: "Melhoria contínua"}, {titulo: "Liderança"}
+      ]
+    });
+
+    this.perguntas.push({
+      titulo: "Assinale a alternativa que define corretamente aquela característica composta pelas subcaracterísticas acurácia, adequação e interoperabilidade:",
+      nivelDificuldade: this.niveisDificuldade[2],
+      area: this.areas[1],
+      alternativaCorreta: {titulo: "Funcionalidade"},
+      alternativasIncorretas: [
+        {titulo: "Eficiência"}, {titulo: "Portabilidade"}, {titulo: "Manutenibilidade"}
       ]
     });
 
@@ -107,7 +137,7 @@ export class PerguntaProvider {
       area: this.areas[1],
       alternativaCorreta: {titulo: "Usabilidade"},
       alternativasIncorretas: [
-        {titulo: "Portabilidade"}, {titulo: "Manutenibilidade"}, {titulo: "Funcionalidade"}
+        {titulo: "Portabilidade"}, {titulo: "Manutenibilidade"}, {titulo: "Controlabilidade"}
       ]
     });
 
@@ -135,19 +165,19 @@ export class PerguntaProvider {
       titulo: "Dentre os atributos de um software de qualidade, incluem-se:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[1],
-      alternativaCorreta: {titulo: "Eficiência, manutenibilidade e usabilidade"},
+      alternativaCorreta: {titulo: "Eficiência e usabilidade"},
       alternativasIncorretas: [
-        {titulo: "Controlabilidade, eficiência e manutenibilidade"}, {titulo: "Eficiência, imutabilidade e manutenibilidade"}, {titulo: "Imutabilidade, manutenibilidade e usabilidade"}
+        {titulo: "Imutabilidade e manutenibilidade"}, {titulo: "Eficiência e imutabilidade"}, {titulo: "Imutabilidade e usabilidade"}
       ]
     });
 
     this.perguntas.push({
-      titulo: "O modelo de processo de avaliação é o processo que pode ser aplicado a cada fase apropriada do ciclo de vida de cada componente de software produto e é constituído por três estágios. Qual das alternativas não é um dos seus estágios:",
+      titulo: "O modelo de processo de avaliação é constituído por três estágios. Qual das alternativas não é um dos seus estágios:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[1],
       alternativaCorreta: {titulo: "Modificabilidade"},
       alternativasIncorretas: [
-        {titulo: "Definição de Requisitos de Qualidade"}, {titulo: "Preparação da Avaliação"}, {titulo: "Procedimento de Avaliação"}
+        {titulo: "Ter de Requisitos de Qualidade"}, {titulo: "Preparação da Avaliação"}, {titulo: "Procedimento de Avaliação"}
       ]
     });
 
@@ -165,25 +195,25 @@ export class PerguntaProvider {
       titulo: "A engenharia reversa é o processo de análise de um software. Qual das alternativas a seguir não é um elemento da engenharia de reversa:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[2],
-      alternativaCorreta: {titulo: "Confiabilidade"},
+      alternativaCorreta: {titulo: "Usabilidade"},
       alternativasIncorretas: [
         {titulo: "Direcionalidade"}, {titulo: "Nível de abstração"}, {titulo: "Completitude do processo"}
       ]
     });
 
     this.perguntas.push({
-      titulo: "Sobre manutenção de software, assinale a alternativa incorreta:",
+      titulo: "Esse tipo de manutenção faz alterações no software buscando melhorar a confiabilidade, assinale a alternativa correta:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[2],
-      alternativaCorreta: {titulo: "A manutenibilidade deve ser considerada em apenas um nível do processo de revisão da engenharia de software"},
+      alternativaCorreta: {titulo: "Manutenção preventiva"},
       alternativasIncorretas: [
-        {titulo: "A maioria dos problemas com a manutenção de software é causada por deficiência na maneira como o software foi desenvolvido e planejado"}, {titulo: "A engenharia reversa trata-se de um processo para obter especificações do sistema através de uma profunda análise, compreensão do sistema existente"}, {titulo: "A manutenibilidade pode ser definida qualitativamente como a facilidade com que o software pode ser entendido, corrigido, adaptado e ou melhorado"}
+        {titulo: "Manutenção perfectiva"}, {titulo: "Manutenção evolutiva"}, {titulo: "Manutenção corretiva"}
       ]
     });
 
     this.perguntas.push({
       titulo: "Qual das alternativas a seguir não é um tipo de manutenção de software:",
-      nivelDificuldade: this.niveisDificuldade[2],
+      nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[2],
       alternativaCorreta: {titulo: "Manutenção de melhorias"},
       alternativasIncorretas: [
@@ -212,22 +242,22 @@ export class PerguntaProvider {
     });
 
     this.perguntas.push({
-      titulo: "Sobre manutenção evolutiva, assinale a alternativa incorreta:",
+      titulo: "Sobre o uso da manutenção evolutiva no software, assinale a alternativa incorreta:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[2],
-      alternativaCorreta: {titulo: "Modificações previstas no documento de requisitos original do software"},
+      alternativaCorreta: {titulo: "Nível de abstração"},
       alternativasIncorretas: [
-        {titulo: "Tem por intuito melhorar a qualidade do software"}, {titulo: "Acrescenta novas funcionalidades"}, {titulo: "Modifica o código-fonte buscando obter melhor legibilidade"}
+        {titulo: "Melhora a qualidade"}, {titulo: "Adiciona novas funcionalidades"}, {titulo: "Melhora o desempenho "}
       ]
     });
 
     this.perguntas.push({
-      titulo: "Sobre os tipos de manutenção de software, assinale a alternativa incorreta:",
+      titulo: "A fase caracterizada  pela realização de alterações de naturezas diversas, como corrigir erros e alterar funções, denomina-se fase de:",
       nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[2],
-      alternativaCorreta: {titulo: "Manutenção de melhorias acomoda mudanças no ambiente ou nas necessidades do usuário"},
+      alternativaCorreta: {titulo: "Manutenção"},
       alternativasIncorretas: [
-        {titulo: "Manutenção perfectiva adiciona novas funcionalidades"}, {titulo: "Manutenção evolutiva oferece uma estrutura melhor para futuras manutenções"}, {titulo: "Manutenção corretiva faz a correção de erros no software que não foram identificados na fase teste"}
+        {titulo: "Testes"}, {titulo: "Desenvolvimento"}, {titulo: "Definição"}
       ]
     });
 
@@ -242,42 +272,43 @@ export class PerguntaProvider {
     });
 
     this.perguntas.push({
-      titulo: "Sobre manutenção de software, qual das alternativas a seguir é a correta:",
-      nivelDificuldade: this.niveisDificuldade[0],
+      titulo: "O tipo de manutenção que é realizada visando ao aprimoramento do software para além dos requisitos funcionais originais é conhecido como:",
+      nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[2],
-      alternativaCorreta: {titulo: "É o processo de melhoria e otimização de um software já desenvolvido, como também reparo de defeitos"},
+      alternativaCorreta: {titulo: "Perfectiva"},
+
       alternativasIncorretas: [
-        {titulo: "A manutenção perfectiva procura por erros que ninguém achou"}, {titulo: "Os tipos de manutenção de software são preventiva, adaptativa, de melhorias e corretiva"}, {titulo: "Uma das suas técnicas é separação dinâmica, a qual é usada para identificar todos os códigos de programa que são afetados por alguma variável"}
+        {titulo: "Corretiva"}, {titulo: "Adaptativa"}, {titulo: "Preventiva"}
       ]
     });
 
     this.perguntas.push({
-      titulo: "Sobre requisitos não funcionais,assinale a alternativa incorreta:",
+      titulo: "Qual das alternativas não é uma fase da técnica JAD:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[0],
-      alternativaCorreta: {titulo: "É fácil estimar prazo/esforço/custo para implementação"},
+      alternativaCorreta: {titulo: "Sessão SRG"},
       alternativasIncorretas: [
-        {titulo: "Trata-se de algo que não é uma funcionalidade, mas que precisa ser realizado para que o software atenda seu propósito"}, {titulo: "Requisitos não funcionais são tão importantes quanto os requisitos funcionais ou regras de negócio"}, {titulo: "Requisitos não funcionais incluem atributos de qualidade para o produto"}
+        {titulo: "Preparação"}, {titulo: "Definição"}, {titulo: "Pesquisa"}
       ]
     });
 
     this.perguntas.push({
-      titulo: "Sobre engenharia de requisitos, assinale a alternativa correta:",
+      titulo: "Sobre uma das definições de gerência de requisitos, assinale a alternativa correta:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[0],
-      alternativaCorreta: {titulo: "Requisitos de software são descobertos por meio de um processo chamado elicitação"},
+      alternativaCorreta: {titulo: "Rastreabilidade"},
       alternativasIncorretas: [
-        {titulo: "Em processos ágeis de desenvolvimento de software, os requisitos devem ser definidos em detalhes no início do projeto"}, {titulo: "A validação de requisitos consiste no teste dos requisitos implementados no software em funcionamento"}, {titulo: " Requisitos não funcionais descrevem o que um software não deve fazer"}
+        {titulo: "Validação"}, {titulo: "Verificação"}, {titulo: "Registro"}
       ]
     });
 
     this.perguntas.push({
-      titulo: "O levantamento de requisitos é o começo de todo desenvolvimento de software, sendo essa atividade repetida em todas as demais etapas da engenharia de requisitos. Sobre essa atividade e suas técnicas assinale a alternativa incorreta:",
+      titulo: "Qual das alternativas a seguir não é um fator crítico na engenharia de requisitos:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[0],
-      alternativaCorreta: {titulo: "A etnografia é uma técnica de conversação que pode ser utilizada para compreender os requisitos sociais e organizacionais"},
+      alternativaCorreta: {titulo: "Apoio Executivo"},
       alternativasIncorretas: [
-        {titulo: "Algumas das razões para o baixo grau de satisfação dos usuários para os sistemas destacam-se a fase de levantamento de requisitos do projeto"}, {titulo: "As técnicas de levantamento de requisitos têm por objetivo superar as dificuldades relativas a esta fase"}, {titulo: "Workshops trata-se de uma técnica de elicitação em grupo usada em uma reunião estruturada"}
+        {titulo: "Requisitos incompletos"}, {titulo: "Falta de Recursos"}, {titulo: "Expectativas Irreais"}
       ]
     });
 
@@ -292,32 +323,32 @@ export class PerguntaProvider {
     });
 
     this.perguntas.push({
-      titulo: "Qual atividade da engenharia de requisitos visa demonstrar que o documento de requisitos produzido corresponde, de fato, ao sistema que o cliente pretende:",
+      titulo: "Qual atividade da engenharia de requisitos visa demonstrar que os requisitos produzidos correspondem ao sistema que o cliente pretende:",
       nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[0],
       alternativaCorreta: {titulo: "Validação"},
       alternativasIncorretas: [
-        {titulo: "Análise de viabilidade"}, {titulo: "Construção"}, {titulo: "Elaboração do Termo de Abertura"}
+        {titulo: "Análise de viabilidade"}, {titulo: "Construção"}, {titulo: "Verificação"}
       ]
     });
 
     this.perguntas.push({
-      titulo: "A descrição de produtos deve conter informações que sejam testáveis e corretas. Essa afirmativa representa requisitos de:",
+      titulo: "Pode variar de uma declaração abstrata de alto nível de um serviço ou de uma restrição do sistema para uma especificação matemática funcional:",
       nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[0],
-      alternativaCorreta: {titulo: "Qualidade"},
+      alternativaCorreta: {titulo: "Requisito"},
       alternativasIncorretas: [
-        {titulo: "Testabilidade"}, {titulo: "Garantia"}, {titulo: "Processos"}
+        {titulo: "Variável de Seção"}, {titulo: "Função Abstrata"}, {titulo: "Polimorfismo"}
       ]
     });
 
     this.perguntas.push({
-      titulo: "Qual processo de engenharia de requisitos é composto por quatro atividades de alto nível:",
+      titulo: "Qual das alternativas a seguir não é um dos principais objetivos da engenharia de requisitos:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[0],
-      alternativaCorreta: {titulo: "Levantamento, análise e negociação, especificação e documentação, validação"},
+      alternativaCorreta: {titulo: "Falta de planejamento"},
       alternativasIncorretas: [
-        {titulo: "Preparação, especificação e documentação, afirmação e implantação"}, {titulo: "Levantamento e preparação, investigação, viabilidade, confirmação"}, {titulo: "Identificação, planejamento, atribuição, validação"}
+        {titulo: "Produtividade na operação"}, {titulo: "Produtividade no projeto"}, {titulo: "Qualidade de software"}
       ]
     });
 
@@ -372,17 +403,17 @@ export class PerguntaProvider {
     });
 
     this.perguntas.push({
-      titulo: "Seu objetivo é a otimização do retorno sobre o investimento aplicado no decorrer dos projetos e em completa sintonia com as metas e articulações estratégicas do empreendimento. Essa informação se refere ao:",
+      titulo: "Seu objetivo é a otimização do retorno sobre o investimento aplicado no decorrer dos projetos. Essa informação se refere a:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[3],
-      alternativaCorreta: {titulo: "Gerenciamento de Portfólios de Projetos"},
+      alternativaCorreta: {titulo: "Gerência de Portfólios"},
       alternativasIncorretas: [
-        {titulo: "Análise de riscos"}, {titulo: "Gerenciamento Integrado de Projetos"}, {titulo: "Gerenciamento Total da Qualidade"}
+        {titulo: "Análise de riscos"}, {titulo: "Gerência Integrada de Projetos"}, {titulo: "Gerência Total da Qualidade"}
       ]
     });
 
     this.perguntas.push({
-      titulo: "Esse documento pode conter a necessidade do negócio, a definição do produto, o nome do gerente e a justificativa da importância do projeto. É o documento que autoriza formalmente o projeto. Esse  documento é chamado de:",
+      titulo: "É o documento que autoriza formalmente o projeto. Esse  documento é chamado de:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[3],
       alternativaCorreta: {titulo: "Project Charter"},
@@ -392,27 +423,27 @@ export class PerguntaProvider {
     });
 
     this.perguntas.push({
-      titulo: "Composto de uma estrutura mais completa, possui as propriedades básicas de registros, conjuntos e ocorrências, e utiliza a linguagem de definição e a linguagem de manipulação de dados. As características mencionadas se referem o(a):",
+      titulo: "Possui as propriedades básicas de registros, conjuntos e ocorrências. As características mencionadas se referem o(a):",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[3],
       alternativaCorreta: {titulo: "O Modelo de Rede"},
       alternativasIncorretas: [
-        {titulo: "O Flowcharting"}, {titulo: "O Nivelamento Heurístico dos Recursos"}, {titulo: "A Medição de Desempenho"}
+        {titulo: "O Flowcharting"}, {titulo: "O Heurístico dos Recursos"}, {titulo: "A Medição de Desempenho"}
       ]
     });
 
     this.perguntas.push({
-      titulo: "Além das atividades de inspeção de software, outras atividades de suma importância no contexto do processo de verificação e validação são aquelas relacionadas:",
+      titulo: "Além das atividades de inspeção de software, possui outras atividades no contexto do processo de verificação e validação são aquelas relacionadas:",
       nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[4],
       alternativaCorreta: {titulo: "Teste de software"},
       alternativasIncorretas: [
-        {titulo: "Manutenção de software"}, {titulo: "Estimativa de custo de software"}, {titulo: "Gerenciamento de configuração de software"}
+        {titulo: "Manutenção de software"}, {titulo: "Estimativa de custo"}, {titulo: "Gerência de configuração"}
       ]
     });
 
     this.perguntas.push({
-      titulo: "Os testes de software são executados, usando os procedimentos e documentos de script de teste. Para que a fase de execução de teste, seja realizada com sucesso deve(m) ser executado(s):",
+      titulo: "Para que a fase de execução de teste, seja realizada com sucesso deve(m) ser executado(s):",
       nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[4],
       alternativaCorreta: {titulo: "Casos de teste"},
@@ -421,8 +452,8 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({
-      titulo: "Qual a técnica de teste que consiste em se aplicar, a cada nova versão do software ou a cada ciclo, todos os testes que já foram aplicados nas versões ou ciclos de teste anteriores do sistema:",
+    this.perguntas.push({ //mudar pergunta
+      titulo: "Qual a técnica de teste que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos:",
       nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[4],
       alternativaCorreta: {titulo: "Regressão"},
@@ -432,7 +463,7 @@ export class PerguntaProvider {
     });
 
     this.perguntas.push({
-      titulo: "Qual dos testes a seguir pode ser classificada em alguns dos itens como stress, execução, operação, compliance, segurança, recuperação contingência e também é conhecido como teste da caixa branca:",
+      titulo: "Qual dos testes a seguir pode ser classificada em alguns dos itens como stress, execução, operação e também é conhecido como teste da caixa branca:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[4],
       alternativaCorreta: {titulo: "Estrutural"},
@@ -442,7 +473,7 @@ export class PerguntaProvider {
     });
 
     this.perguntas.push({
-      titulo: "Foram detectados problemas no sistema como data de nascimento preenchida com data futura, campos de preenchimento obrigatório que não são validados, botões que não executam as ações devidas. Esses problemas são rastreados por esse tipo de teste também conhecido de teste funcional:",
+      titulo: "Qual teste é conhecido como teste funcional, pois é baseado nos requisitos funcionais do software:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[4],
       alternativaCorreta: {titulo: "Caixa preta"},
@@ -455,14 +486,14 @@ export class PerguntaProvider {
       titulo: "Assinale a alternativa que não corresponde a um dos testes de software,realizados em softwares comerciais:",
       nivelDificuldade: this.niveisDificuldade[1],
       area: this.areas[4],
-      alternativaCorreta: {titulo: "Teste de volatilidade de requisitos"},
+      alternativaCorreta: {titulo: "Teste de volatilidade"},
       alternativasIncorretas: [
         {titulo: "Teste de validação"}, {titulo: "Teste de integração"}, {titulo: "Teste de unidade"}
       ]
     });
 
     this.perguntas.push({
-      titulo: " Qual dos testes a seguir é realizado em ambientes de laboratório e comumente são executados por funcionários internos que simulam usuários reais, realizando tarefas típicas no aplicativo:",
+      titulo: " Qual dos testes a seguir é realizado no período entre o término do desenvolvimento e a entrega:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[4],
       alternativaCorreta: {titulo: "Teste Alfa"},
@@ -472,53 +503,27 @@ export class PerguntaProvider {
     });
 
     this.perguntas.push({
-      titulo: "A fase de elaboração dos testes de software é uma das partes mais importantes, no desenvolvimento de um software.Sobre o teste de caixa branca,assinale a alternativa correta:",
+      titulo: "A análise estática de código pode ter sua verificação agrupada em três aspectos principais,assinale a alternativa incorreta:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[4],
-      alternativaCorreta: {titulo: "É a utilização de um sistema, para controlar a execução dos testes de um Software"},
+      alternativaCorreta: {titulo: "Verificação por log"},
       alternativasIncorretas: [
-        {titulo: "Ferramenta de instalação de Software"}, {titulo: "Tem como principal tarefa, ajudar na concepção do Software"}, {titulo: "É a tarefa executada, pelos analistas de teste, tendo como objetivo descrever os fluxos dos UCs do Sistema"}
+        {titulo: "Verificação por estilo"}, {titulo: "Verificação por boas práticas"}, {titulo: "Verificação por bugs"}
       ]
     });
 
     this.perguntas.push({
-      titulo: "Assinale a alternativa correta, sobre automação de teste de software:",
+      titulo: "É a fase do teste de software em que módulos são combinados e testados em grupo. Que teste a seguir tem essa fase:",
       nivelDificuldade: this.niveisDificuldade[2],
       area: this.areas[4],
-      alternativaCorreta: {titulo: "Teste do código fonte, de cada linha de código possível, dos fluxos básicos e dos alternativos"},
+      alternativaCorreta: {titulo: "Teste de integração"},
       alternativasIncorretas: [
-        {titulo: "Teste feito pela equipe de testadores de software"}, {titulo: "Teste executado, após a implantação do software"}, {titulo: "Teste feito pelo próprio programador que verifica, se o código que foi construído, é não funcional"}
+        {titulo: "Teste de unidade"}, {titulo: "Teste de sistema"}, {titulo: "Teste de aceitação"}
       ]
     });
 
-    this.perguntas.push({
-      titulo: "Pode variar de uma declaração abstrata de alto nível de um serviço ou de uma restrição do sistema para uma especificação matemática funcional:",
-      nivelDificuldade: this.niveisDificuldade[2],
-      area: this.areas[0],
-      alternativaCorreta: {titulo: "Requisito"},
-      alternativasIncorretas: [
-        {titulo: "Variável de Seção"}, {titulo: "Função Abstrata"}, {titulo: "Polimorfismo"}
-      ]
-    });
 
-    this.perguntas.push({
-      titulo: "Processo que estabelece os serviços que o cliente necessita do sistema e as restrições sob as quais ele opera e é desenvolvido:",
-      nivelDificuldade: this.niveisDificuldade[1],
-      area: this.areas[0],
-      alternativaCorreta: {titulo: "Engenharia de Requisitos"},
-      alternativasIncorretas: [
-        {titulo: "Engenharia de Software"}, {titulo: "Teste de Software"}, {titulo: "Qualidade de Software"}
-      ]
-    });
 
-    this.perguntas.push({
-      titulo: "A descrição de produtos deve conter informações que sejam testáveis e corretas. Essa afirmativa representa requisitos de:",
-      nivelDificuldade: this.niveisDificuldade[1],
-      area: this.areas[0],
-      alternativaCorreta: {titulo: "Qualidade"},
-      alternativasIncorretas: [
-        {titulo: "Testabilidade"}, {titulo: "Garantia"}, {titulo: "Processos"}
-      ]
-    });
+
   }
 }

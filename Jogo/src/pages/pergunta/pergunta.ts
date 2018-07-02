@@ -6,7 +6,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Pergunta } from '../../models/pergunta';
 import shuffle from 'shuffle-array';
 
-const TOTAL_PERGUNTAS = 27;
+const TOTAL_PERGUNTAS = 45;
 
 @IonicPage()
 @Component({
@@ -22,6 +22,7 @@ export class PerguntaPage {
   public alternativas: Alternativa[] = new Array();
   public usouDica = false;
   public usouSopro = false;
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private perguntaProvider: PerguntaProvider) {
     this.sortearAlternativas();
