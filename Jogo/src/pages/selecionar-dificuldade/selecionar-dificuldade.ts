@@ -23,8 +23,9 @@ export class SelecionarDificuldadePage {
     console.log('ionViewDidLoad SelecionarDificuldadePage');
   }
 
-  acessarPergunta() {
-    this.navCtrl.push(PerguntaPage);
+  acessarPergunta(dificuldade: string) {
+    this.navCtrl.push(PerguntaPage, {
+      dificuldade: dificuldade
+    });
   }
-
 }

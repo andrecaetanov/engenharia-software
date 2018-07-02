@@ -2,12 +2,8 @@ import { Pergunta } from './../../models/pergunta';
 import { Injectable } from '@angular/core';
 import shuffle from 'shuffle-array';
 
-/*
-  Generated class for the PerguntaProvider provider.
+const TOTAL_PERGUNTAS = 15;
 
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class PerguntaProvider {
   private perguntas: Pergunta[] = new Array();
@@ -29,6 +25,7 @@ export class PerguntaProvider {
   }
 
   public getPerguntasPorDificuldade(dificuldade: string) {
+    console.log(dificuldade);
     let perguntasAleatorias: Pergunta[] = new Array();
     let contadorEngenhariaRequisitos = 0;
     let contadorQualidadeSoftware = 0;
@@ -62,11 +59,12 @@ export class PerguntaProvider {
         }
       }
 
-      if(perguntasAleatorias.length == 15) {
+      if(perguntasAleatorias.length == TOTAL_PERGUNTAS) {
         return true;
       }
     });
 
+    console.log(perguntasAleatorias);
     return perguntasAleatorias;
   }
 
