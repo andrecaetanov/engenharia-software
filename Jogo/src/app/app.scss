@@ -36,3 +36,19 @@ ion-footer > ion-toolbar > div.toolbar-content.toolbar-content-md > p {
 .botao-generico {
   margin-top: 1em;
 }
+
+.alert-danger .alert-wrapper {
+  background-color: #f53d3d;
+}
+
+.alert-danger .alert-button {
+  color: #fff;
+}
+
+.alert-success .alert-wrapper {
+  background-color: #32db64;
+}
+
+.alert-danger .alert-button, .alert-success .alert-button {
+  color: #fff;
+}

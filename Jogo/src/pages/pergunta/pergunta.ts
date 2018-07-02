@@ -77,9 +77,10 @@ export class PerguntaPage {
   }
 
   avisarRespostaCorreta(alternativa: Alternativa) {
-    let avisoRespostaCorreta = this.alertCtrl.create({
+    let alert = this.alertCtrl.create({
       title: 'Resposta correta!',
       message: alternativa.titulo,
+      cssClass: 'alert-success',
       buttons: [
         {
           text: 'Continuar',
@@ -92,13 +93,14 @@ export class PerguntaPage {
         }
       ]
     });
-    avisoRespostaCorreta.present();
+    alert.present();
   }
 
   avisarRespostaErrada() {
-    let avisoRespostaErrada = this.alertCtrl.create({
+    let alert = this.alertCtrl.create({
       title: 'Ooops! Você errou',
       message: 'Não desista!',
+      cssClass: 'alert-danger',
       buttons: [
         {
           text: 'Continuar',
@@ -108,7 +110,7 @@ export class PerguntaPage {
         }
       ]
     });
-    avisoRespostaErrada.present();
+    alert.present();
   }
 
   acessarResultado() {
