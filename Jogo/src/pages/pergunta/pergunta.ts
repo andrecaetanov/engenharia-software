@@ -44,19 +44,19 @@ export class PerguntaPage {
       title: 'Sair',
       message: 'Deseja encerrar esta partida?',
       buttons: [
-      {
-        text: 'Não',
-        role: 'cancel',
-        handler: () => {
-          console.log('Nada acontece.');
+        {
+          text: 'Não',
+          role: 'cancel',
+          handler: () => {
+            console.log('Nada acontece.');
+          }
+        },
+        {
+          text: 'Sim',
+          handler: () => {
+            this.navCtrl.push(MenuPrincipalPage);
+          }
         }
-      },
-      {
-        text: 'Sim',
-        handler: () => {
-          this.navCtrl.push(MenuPrincipalPage);
-        }
-      }
       ]
     });
     confirmarSaida.present();
@@ -65,18 +65,50 @@ export class PerguntaPage {
   verificarResposta(alternativa: Alternativa) {
     if (this.indicePergunta < TOTAL_PERGUNTAS) {
       if (alternativa.titulo == this.perguntaAtual.alternativaCorreta.titulo) {
-        this.indicePergunta++;
-        this.perguntaAtual = this.perguntas[this.indicePergunta];
-        this.sortearAlternativas();
-        this.pontuacao = this.pontuacao * 2;
+        this.avisarRespostaCorreta(alternativa);
       }
       else {
-        this.acessarResultado();
+        this.avisarRespostaErrada();
       }
     }
     else {
-      this.acessarResultado();
+      this.avisarRespostaErrada();
     }
+  }
+
+  avisarRespostaCorreta(alternativa: Alternativa) {
+    let avisoRespostaCorreta = this.alertCtrl.create({
+      title: 'Resposta correta!',
+      message: alternativa.titulo,
+      buttons: [
+        {
+          text: 'Continuar',
+          handler: () => {
+            this.indicePergunta++;
+            this.perguntaAtual = this.perguntas[this.indicePergunta];
+            this.sortearAlternativas();
+            this.pontuacao = this.pontuacao * 2;
+          }
+        }
+      ]
+    });
+    avisoRespostaCorreta.present();
+  }
+
+  avisarRespostaErrada() {
+    let avisoRespostaErrada = this.alertCtrl.create({
+      title: 'Ooops! Você errou',
+      message: 'Não desista!',
+      buttons: [
+        {
+          text: 'Continuar',
+          handler: () => {
+            this.acessarResultado();
+          }
+        }
+      ]
+    });
+    avisoRespostaErrada.present();
   }
 
   acessarResultado() {
