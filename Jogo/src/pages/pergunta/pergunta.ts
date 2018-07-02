@@ -6,7 +6,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Pergunta } from '../../models/pergunta';
 import shuffle from 'shuffle-array';
 
-const TOTAL_PERGUNTAS = 45;
+const TOTAL_PERGUNTAS = 15;
 
 @IonicPage()
 @Component({
@@ -15,9 +15,10 @@ const TOTAL_PERGUNTAS = 45;
   providers: [PerguntaProvider]
 })
 export class PerguntaPage {
-  private perguntas: Pergunta[] = this.perguntaProvider.getPerguntas();
+  private dificuldade: string;
+  private perguntas: Pergunta[] = new Array();
   private indicePergunta: number = 0;
-  public perguntaAtual: Pergunta = this.perguntas[this.indicePergunta];
+  public perguntaAtual: Pergunta;
   public pontuacao: number = 500;
   public alternativas: Alternativa[] = new Array();
   public usouDica = false;
@@ -25,6 +26,10 @@ export class PerguntaPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private perguntaProvider: PerguntaProvider) {
+    this.dificuldade = navParams.get('dificuldade');
+    this.perguntas = this.perguntaProvider.getPerguntasPorDificuldade(this.dificuldade);
+    console.log(this.perguntas);
+    this.perguntaAtual = this.perguntas[this.indicePergunta];
     this.sortearAlternativas();
   }
 
