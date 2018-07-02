@@ -2,7 +2,7 @@ import { Alternativa } from './../../models/alternativa';
 import { PerguntaProvider } from './../../providers/pergunta/pergunta';
 import { MenuPrincipalPage } from './../menu-principal/menu-principal';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AlertController, IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Pergunta } from '../../models/pergunta';
 import shuffle from 'shuffle-array';
 import { ResultadoPage } from '../resultado/resultado';
@@ -26,7 +26,8 @@ export class PerguntaPage {
   public usouSopro = false;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private perguntaProvider: PerguntaProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              private alertCtrl: AlertController, private perguntaProvider: PerguntaProvider) {
     this.dificuldade = navParams.get('dificuldade');
     this.perguntas = this.perguntaProvider.getPerguntasPorDificuldade(this.dificuldade);
     console.log(this.perguntas);
@@ -39,7 +40,26 @@ export class PerguntaPage {
   }
 
   retornarParaMenu() {
-    this.navCtrl.push(MenuPrincipalPage);
+    let confirmarSaida = this.alertCtrl.create({
+      title: 'Sair',
+      message: 'Deseja encerrar esta partida?',
+      buttons: [
+      {
+        text: 'Não',
+        role: 'cancel',
+        handler: () => {
+          console.log('Nada acontece.');
+        }
+      },
+      {
+        text: 'Sim',
+        handler: () => {
+          this.navCtrl.push(MenuPrincipalPage);
+        }
+      }
+      ]
+    });
+    confirmarSaida.present();
   }
 
   verificarResposta(alternativa: Alternativa) {
