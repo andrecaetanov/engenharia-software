@@ -60,11 +60,10 @@ export class PerguntaPage {
   usarDica() {
     if (!this.usouDica) {
       this.usouDica = true;
-      let contador = 0;
 
-      shuffle( this.perguntaAtual.alternativasIncorretas);
+      let alternativasAuxiliar = shuffle.pick(this.perguntaAtual.alternativasIncorretas, {'picks': 2});
 
-      this.perguntaAtual.alternativasIncorretas.some(alternativa => {
+      alternativasAuxiliar.forEach(alternativa => {
         if (alternativa == this.alternativas[0]) {
           this.alternativas[0].desabilitada = true;
         }
@@ -77,12 +76,6 @@ export class PerguntaPage {
         else if (alternativa == this.alternativas[3]) {
           this.alternativas[3].desabilitada = true;
         }
-
-        contador++;
-
-        if (contador == 2) {
-          return true;
-        }
       });
     }
   }
@@ -90,25 +83,64 @@ export class PerguntaPage {
   usarSopro() {
     if (!this.usouSopro) {
       this.usouSopro = true;
-      let porcentagemRestante = 100;
-      let contador = 1;
-      let alternativasAuxiliar = this.alternativas.slice(0);
-      shuffle(alternativasAuxiliar);
+      let alternativasAuxiliar = new Array();
 
-      alternativasAuxiliar.forEach(alternativa => {
-        if (contador == 4) {
-          alternativa.porcentagemSopro = porcentagemRestante;
-        }
-        else if (alternativa.titulo == this.perguntaAtual.alternativaCorreta.titulo) {
-          alternativa.porcentagemSopro = Math.floor(Math.random() * (50 - 25)) + 25;
-        }
-        else {
-          alternativa.porcentagemSopro = Math.floor(Math.random() * (30 - 15)) + 15;
-        }
-
-        porcentagemRestante = porcentagemRestante - alternativa.porcentagemSopro;
-        contador++;
-      });
+      if (!this.usouDica) {
+        alternativasAuxiliar = this.alternativas;
+        this.calcularSoproSemDica(alternativasAuxiliar);
+      }
+      else {
+        this.alternativas.forEach(alternativa => {
+          if (!alternativa.desabilitada) {
+            alternativasAuxiliar.push(alternativa);
+          }
+          this.calcularSoproComDica(alternativasAuxiliar);
+        });
+      }
     }
+  }
+
+  calcularSoproSemDica(alternativas: Alternativa[]) {
+    let porcentagemRestante = 100;
+    let contador = 1;
+
+    shuffle(alternativas, {'copy': true});
+
+    alternativas.forEach(alternativa => {
+      if (contador == alternativas.length) {
+        alternativa.porcentagemSopro = porcentagemRestante;
+      }
+      else if (alternativa.titulo == this.perguntaAtual.alternativaCorreta.titulo) {
+        alternativa.porcentagemSopro = Math.floor(Math.random() * (50 - 30)) + 30;
+      }
+      else {
+        alternativa.porcentagemSopro = Math.floor(Math.random() * (25 - 15)) + 15;
+      }
+
+      porcentagemRestante = porcentagemRestante - alternativa.porcentagemSopro;
+      contador++;
+    });
+  }
+
+  calcularSoproComDica(alternativas: Alternativa[]) {
+    let porcentagemRestante = 100;
+    let contador = 1;
+
+    shuffle(alternativas, {'copy': true});
+
+    alternativas.forEach(alternativa => {
+      if (contador == alternativas.length) {
+        alternativa.porcentagemSopro = porcentagemRestante;
+      }
+      else if (alternativa.titulo == this.perguntaAtual.alternativaCorreta.titulo) {
+        alternativa.porcentagemSopro = Math.floor(Math.random() * (80 - 60)) + 60;
+      }
+      else {
+        alternativa.porcentagemSopro = Math.floor(Math.random() * (40 - 20)) + 20;
+      }
+
+      porcentagemRestante = porcentagemRestante - alternativa.porcentagemSopro;
+      contador++;
+    });
   }
 }
