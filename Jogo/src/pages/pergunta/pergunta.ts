@@ -83,6 +83,7 @@ export class PerguntaPage {
       title: 'Resposta correta!',
       message: 'Parabéns!',
       cssClass: 'alert-success',
+      enableBackdropDismiss: false,
       buttons: [
         {
           text: 'Continuar',
@@ -103,6 +104,7 @@ export class PerguntaPage {
       title: 'Ooops! Você errou!',
       message: 'Não desista!',
       cssClass: 'alert-danger',
+      enableBackdropDismiss: false,
       buttons: [
         {
           text: 'Continuar',
