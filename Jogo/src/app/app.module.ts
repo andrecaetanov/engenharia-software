@@ -8,7 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 import { NativeAudio } from '@ionic-native/native-audio';
-
+import { PontuacaoPage } from '../pages/pontuacao/pontuacao';
 import { MyApp } from './app.component';
 import { MenuPrincipalPage } from '../pages/menu-principal/menu-principal';
 import { SelecionarDificuldadePage } from '../pages/selecionar-dificuldade/selecionar-dificuldade';
@@ -29,6 +29,7 @@ import { RegistroPage } from '../pages/registro/registro';
     LoginPage,
     RegistroPage,
     ResultadoPage,
+    PontuacaoPage
   ],
   imports: [
     BrowserModule,
@@ -47,6 +48,7 @@ import { RegistroPage } from '../pages/registro/registro';
     LoginPage,
     RegistroPage,
     ResultadoPage,
+    PontuacaoPage
   ],
   providers: [
     StatusBar,

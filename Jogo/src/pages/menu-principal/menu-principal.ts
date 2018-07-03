@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SelecionarDificuldadePage } from '../selecionar-dificuldade/selecionar-dificuldade';
 import { InstrucoesPage } from '../instrucoes/instrucoes';
-
+import { PontuacaoPage } from '../pontuacao/pontuacao';
 import { OpcoesPage } from '../opcoes/opcoes';
 import { LoginPage } from '../login/login';
 import { NativeAudio } from '@ionic-native/native-audio';
@@ -13,7 +13,8 @@ import { NativeAudio } from '@ionic-native/native-audio';
 })
 export class MenuPrincipalPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private nativeAudio: NativeAudio) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              private nativeAudio: NativeAudio) {
   }
 
   ionViewDidLoad() {
@@ -31,6 +32,10 @@ export class MenuPrincipalPage {
 
   acessarPaginaOpcoes() {
     this.navCtrl.push(OpcoesPage);
+  }
+
+  acessarPaginaPontuacoes() {
+    this.navCtrl.push(PontuacaoPage);
   }
 
   sair() {

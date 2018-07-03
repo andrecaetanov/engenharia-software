@@ -1,0 +1,81 @@
+<ion-content padding>
+  <ion-segment [(ngModel)]="pontuacao" class="dificuldades">
+    <ion-segment-button value="facil">
+      Fácil
+    </ion-segment-button>
+    <ion-segment-button value="medio">
+      Médio
+    </ion-segment-button>
+    <ion-segment-button value="dificil">
+      Difícil
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="pontuacao">
+    <ion-list *ngSwitchCase="'facil'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <h1 class="pontos">1000000</h1>
+        </ion-thumbnail>
+        <h2>Engenheiro Sênior</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <h1 class="pontos">50000</h1>
+        </ion-thumbnail>
+        <h2>Engenheiro Júnior</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <h1 class="pontos">5000</h1>
+        </ion-thumbnail>
+        <h2>Estagiário</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'medio'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <h1 class="pontos">75000</h1>
+        </ion-thumbnail>
+        <h2>Engenheiro Pleno</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <h1 class="pontos">15000</h1>
+        </ion-thumbnail>
+        <h2>Engenheiro Júnior</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <h1 class="pontos">1000</h1>
+        </ion-thumbnail>
+        <h2>Estagiário</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'dificil'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <h1 class="pontos">100000</h1>
+        </ion-thumbnail>
+        <h2>Engenheiro Pleno</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <h1 class="pontos">50000</h1>
+        </ion-thumbnail>
+        <h2>Engenheiro Júnior</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <h1 class="pontos">1000000</h1>
+        </ion-thumbnail>
+        <h2>Engenheiro Sênior</h2>
+      </ion-item>
+    </ion-list>
+  </div>
+  <button ion-button color="light" clear class="voltar" (click)="acessarPaginaMenu()">
+    Voltar
+  </button>
+</ion-content>
