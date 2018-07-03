@@ -7,7 +7,7 @@ import { Pergunta } from '../../models/pergunta';
 import shuffle from 'shuffle-array';
 import { NativeAudio } from '@ionic-native/native-audio';
 
-const TOTAL_PERGUNTAS = 15;
+const TOTAL_PERGUNTAS = 45;
 
 @IonicPage()
 @Component({
@@ -38,6 +38,7 @@ export class PerguntaPage {
     console.log('ionViewDidLoad PerguntaPage');
     this.nativeAudio.preloadSimple('resposta_errada', 'assets/audios/resposta_errada.mp3');
     this.nativeAudio.preloadSimple('aplausos', 'assets/audios/aplausos.mp3');
+    this.nativeAudio.preloadSimple('aplausos_alegria', 'assets/audios/aplausos_alegria.mp3');
   }
 
   retornarParaMenu() {
@@ -58,6 +59,7 @@ export class PerguntaPage {
         this.retornarParaMenu();
       }
     }
+      this.nativeAudio.play('aplausos_alegria');
   }
 
   sortearAlternativas() {

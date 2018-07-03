@@ -2,8 +2,12 @@ import { Pergunta } from './../../models/pergunta';
 import { Injectable } from '@angular/core';
 import shuffle from 'shuffle-array';
 
-const TOTAL_PERGUNTAS = 15;
+/*
+  Generated class for the PerguntaProvider provider.
 
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
 @Injectable()
 export class PerguntaProvider {
   private perguntas: Pergunta[] = new Array();
@@ -25,7 +29,6 @@ export class PerguntaProvider {
   }
 
   public getPerguntasPorDificuldade(dificuldade: string) {
-    console.log(dificuldade);
     let perguntasAleatorias: Pergunta[] = new Array();
     let contadorEngenhariaRequisitos = 0;
     let contadorQualidadeSoftware = 0;
@@ -59,12 +62,10 @@ export class PerguntaProvider {
         }
       }
 
-      if(perguntasAleatorias.length == TOTAL_PERGUNTAS) {
+      if(perguntasAleatorias.length == 15) {
         return true;
       }
     });
-
-    console.log(perguntasAleatorias);
     return perguntasAleatorias;
   }
 
@@ -431,7 +432,7 @@ export class PerguntaProvider {
     });
 
     this.perguntas.push({
-      titulo: "Além das atividades de inspeção de software, possui outras atividades no contexto do processo de verificação e validação são aquelas relacionadas:",
+      titulo: "Além das atividades de inspeção de software, possui outras atividades no contexto do processo de verificação e validação são aquelas relacionadas a:",
       nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[4],
       alternativaCorreta: {titulo: "Teste de software"},
@@ -450,7 +451,7 @@ export class PerguntaProvider {
       ]
     });
 
-    this.perguntas.push({ //mudar pergunta
+    this.perguntas.push({
       titulo: "Qual a técnica de teste que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos:",
       nivelDificuldade: this.niveisDificuldade[0],
       area: this.areas[4],
