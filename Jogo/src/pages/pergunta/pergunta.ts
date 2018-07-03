@@ -69,9 +69,11 @@ export class PerguntaPage {
       this.acessarResultado();
     }
     else if (alternativa.titulo == this.perguntaAtual.alternativaCorreta.titulo) {
+      this.nativeAudio.play('aplausos');
       this.avisarRespostaCorreta();
     }
     else {
+      this.nativeAudio.play('resposta_errada');
       this.avisarRespostaErrada();
     }
   }
@@ -85,7 +87,6 @@ export class PerguntaPage {
         {
           text: 'Continuar',
           handler: () => {
-            this.nativeAudio.play('aplausos');
             this.indicePergunta++;
             this.perguntaAtual = this.perguntas[this.indicePergunta];
             this.sortearAlternativas();
@@ -106,7 +107,6 @@ export class PerguntaPage {
         {
           text: 'Continuar',
           handler: () => {
-            this.nativeAudio.play('resposta_errada');
             this.acessarResultado();
           }
         }

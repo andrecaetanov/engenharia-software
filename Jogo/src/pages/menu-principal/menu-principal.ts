@@ -13,8 +13,7 @@ import { NativeAudio } from '@ionic-native/native-audio';
 })
 export class MenuPrincipalPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-              private nativeAudio: NativeAudio) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private nativeAudio: NativeAudio) {
   }
 
   ionViewDidLoad() {
@@ -24,7 +23,6 @@ export class MenuPrincipalPage {
 
   acessarPaginaSelecionarDificuldade() {
     this.navCtrl.push(SelecionarDificuldadePage);
-    this.nativeAudio.stop('theme-song');
   }
 
   acessarPaginaInstrucoes() {
