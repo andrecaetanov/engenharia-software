@@ -6,6 +6,7 @@ import { AlertController, IonicPage, NavController, NavParams } from 'ionic-angu
 import { Pergunta } from '../../models/pergunta';
 import shuffle from 'shuffle-array';
 import { ResultadoPage } from '../resultado/resultado';
+import { NativeAudio } from '@ionic-native/native-audio';
 
 const TOTAL_PERGUNTAS = 15;
 
@@ -26,12 +27,18 @@ export class PerguntaPage {
   public usouSopro = false;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, private perguntaProvider: PerguntaProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private perguntaProvider: PerguntaProvider,  private alertCtrl: AlertController, private nativeAudio: NativeAudio) {
     this.dificuldade = navParams.get('dificuldade');
     this.perguntas = this.perguntaProvider.getPerguntasPorDificuldade(this.dificuldade);
     console.log(this.perguntas);
     this.perguntaAtual = this.perguntas[this.indicePergunta];
     this.sortearAlternativas();
+  }
+
+  ionViewDidLoad() {
+    this.nativeAudio.preloadSimple('resposta_errada', 'assets/audios/resposta_errada.mp3');
+    this.nativeAudio.preloadSimple('aplausos', 'assets/audios/aplausos.mp3');
+    this.nativeAudio.preloadSimple('aplausos_alegria', 'assets/audios/aplausos_alegria.mp3');
   }
 
   retornarParaMenu() {
@@ -56,14 +63,17 @@ export class PerguntaPage {
 
   verificarResposta(alternativa: Alternativa) {
     if (alternativa.titulo == this.perguntaAtual.alternativaCorreta.titulo && this.indicePergunta+1 == TOTAL_PERGUNTAS) {
+      this.nativeAudio.play('aplausos_alegria');
       this.indicePergunta++;
       this.calcularPontuacao();
       this.acessarResultado();
     }
     else if (alternativa.titulo == this.perguntaAtual.alternativaCorreta.titulo) {
+      this.nativeAudio.play('aplausos');
       this.avisarRespostaCorreta();
     }
     else {
+      this.nativeAudio.play('resposta_errada');
       this.avisarRespostaErrada();
     }
   }
