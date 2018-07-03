@@ -1,9 +1,17 @@
 page-instrucoes {
-	.botao-instrucoes{
-		margin-top: 25%;
+	.botao-instrucoes {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 100px;
+    margin-left: calc(50% - 50px);
   }
+
   .textoInstrucoes {
     color: #ffffff;
     margin-top: 0;
+  }
+
+  ion-slides {
+    height: 80%;
   }
 }

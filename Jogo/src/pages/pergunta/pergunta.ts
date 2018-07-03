@@ -26,17 +26,12 @@ export class PerguntaPage {
   public usouSopro = false;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-              private alertCtrl: AlertController, private perguntaProvider: PerguntaProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, private perguntaProvider: PerguntaProvider) {
     this.dificuldade = navParams.get('dificuldade');
     this.perguntas = this.perguntaProvider.getPerguntasPorDificuldade(this.dificuldade);
     console.log(this.perguntas);
     this.perguntaAtual = this.perguntas[this.indicePergunta];
     this.sortearAlternativas();
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PerguntaPage');
   }
 
   retornarParaMenu() {
@@ -46,10 +41,7 @@ export class PerguntaPage {
       buttons: [
         {
           text: 'Não',
-          role: 'cancel',
-          handler: () => {
-            console.log('Nada acontece.');
-          }
+          role: 'cancel'
         },
         {
           text: 'Sim',
@@ -63,23 +55,21 @@ export class PerguntaPage {
   }
 
   verificarResposta(alternativa: Alternativa) {
-    if (this.indicePergunta < TOTAL_PERGUNTAS) {
-      if (alternativa.titulo == this.perguntaAtual.alternativaCorreta.titulo) {
-        this.avisarRespostaCorreta(alternativa);
-      }
-      else {
-        this.avisarRespostaErrada();
-      }
+    if (alternativa.titulo == this.perguntaAtual.alternativaCorreta.titulo && this.indicePergunta+1 == TOTAL_PERGUNTAS) {
+      this.acessarResultado();
+    }
+    else if (alternativa.titulo == this.perguntaAtual.alternativaCorreta.titulo) {
+      this.avisarRespostaCorreta();
     }
     else {
       this.avisarRespostaErrada();
     }
   }
 
-  avisarRespostaCorreta(alternativa: Alternativa) {
+  avisarRespostaCorreta() {
     let alert = this.alertCtrl.create({
       title: 'Resposta correta!',
-      message: alternativa.titulo,
+      message: 'Parabéns!',
       cssClass: 'alert-success',
       buttons: [
         {
@@ -88,7 +78,7 @@ export class PerguntaPage {
             this.indicePergunta++;
             this.perguntaAtual = this.perguntas[this.indicePergunta];
             this.sortearAlternativas();
-            this.pontuacao = this.pontuacao * 2;
+            this.calcularPontuacao();
           }
         }
       ]
@@ -98,7 +88,7 @@ export class PerguntaPage {
 
   avisarRespostaErrada() {
     let alert = this.alertCtrl.create({
-      title: 'Ooops! Você errou',
+      title: 'Ooops! Você errou!',
       message: 'Não desista!',
       cssClass: 'alert-danger',
       buttons: [
@@ -213,5 +203,27 @@ export class PerguntaPage {
       porcentagemRestante = porcentagemRestante - alternativa.porcentagemSopro;
       contador++;
     });
+  }
+
+  calcularPontuacao() {
+    let x = this.indicePergunta;
+    this.pontuacao = Math.floor(31715*Math.pow(x, 13)/15567552
+      - 461935*Math.pow(x, 12)/2395008
+      + 4913705*Math.pow(x, 11)/598752
+      - 45155785*Math.pow(x, 10)/217728
+      + 62883215*Math.pow(x, 9)/18144
+      - 2927907985*Math.pow(x, 8)/72576
+      + 18265433065*Math.pow(x, 7)/54432
+      - 438199329355*Math.pow(x, 6)/217728
+      + 943670204005*Math.pow(x, 5)/108864
+      - 1434135019115*Math.pow(x, 4)/54432
+      + 5447102018555*Math.pow(x, 3)/99792
+      - 601979209045*Math.pow(x, 2)/8316
+      + 70081738600*x/1287
+      - 17256000);
+
+    if (this.pontuacao % 2 != 0) {
+      this.pontuacao++;
+    }
   }
 }

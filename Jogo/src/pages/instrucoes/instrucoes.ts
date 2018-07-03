@@ -19,10 +19,6 @@ export class InstrucoesPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad InstrucoesPage');
-  }
-
   acessarPaginaMenu() {
     this.navCtrl.push(MenuPrincipalPage);
   }
