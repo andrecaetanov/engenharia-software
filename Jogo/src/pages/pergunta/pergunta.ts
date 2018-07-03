@@ -20,7 +20,7 @@ export class PerguntaPage {
   private perguntas: Pergunta[] = new Array();
   private indicePergunta: number = 0;
   public perguntaAtual: Pergunta;
-  public pontuacao: number = 500;
+  public pontuacao: number = 0;
   public alternativas: Alternativa[] = new Array();
   public usouDica = false;
   public usouSopro = false;
@@ -56,6 +56,8 @@ export class PerguntaPage {
 
   verificarResposta(alternativa: Alternativa) {
     if (alternativa.titulo == this.perguntaAtual.alternativaCorreta.titulo && this.indicePergunta+1 == TOTAL_PERGUNTAS) {
+      this.indicePergunta++;
+      this.calcularPontuacao();
       this.acessarResultado();
     }
     else if (alternativa.titulo == this.perguntaAtual.alternativaCorreta.titulo) {
@@ -207,20 +209,21 @@ export class PerguntaPage {
 
   calcularPontuacao() {
     let x = this.indicePergunta;
-    this.pontuacao = Math.floor(31715*Math.pow(x, 13)/15567552
-      - 461935*Math.pow(x, 12)/2395008
-      + 4913705*Math.pow(x, 11)/598752
-      - 45155785*Math.pow(x, 10)/217728
-      + 62883215*Math.pow(x, 9)/18144
-      - 2927907985*Math.pow(x, 8)/72576
-      + 18265433065*Math.pow(x, 7)/54432
-      - 438199329355*Math.pow(x, 6)/217728
-      + 943670204005*Math.pow(x, 5)/108864
-      - 1434135019115*Math.pow(x, 4)/54432
-      + 5447102018555*Math.pow(x, 3)/99792
-      - 601979209045*Math.pow(x, 2)/8316
-      + 70081738600*x/1287
-      - 17256000);
+    this.pontuacao = Math.floor(172565*Math.pow(x, 14)/871782912
+      - 2545*Math.pow(x, 13)/118272
+      + 10150655*Math.pow(x, 12)/9580032
+      - 99863135*Math.pow(x, 11)/3193344
+      + 76755085*Math.pow(x, 10)/124416
+      - 2492944595*Math.pow(x, 9)/290304
+      + 528982007705*Math.pow(x, 8)/6096384
+      - 62390510885*Math.pow(x, 7)/96768
+      + 768272847935*Math.pow(x, 6)/217728
+      - 255807687365*Math.pow(x, 5)/18144
+      + 1723040781245*Math.pow(x, 4)/42768
+      - 15837329603135*Math.pow(x, 3)/199584
+      + 38222114027525*Math.pow(x, 2)/378378
+      - 101972095375*x/1386
+      + 22757500);
 
     if (this.pontuacao % 2 != 0) {
       this.pontuacao++;
