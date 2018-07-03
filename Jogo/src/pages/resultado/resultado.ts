@@ -19,10 +19,6 @@ export class ResultadoPage {
     this.definirClassificacao();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ResultadoPage');
-  }
-
   retornarParaMenu() {
     this.navCtrl.push(MenuPrincipalPage);
   }

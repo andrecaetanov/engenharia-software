@@ -19,10 +19,6 @@ export class SelecionarDificuldadePage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SelecionarDificuldadePage');
-  }
-
   acessarPergunta(dificuldade: string) {
     this.navCtrl.push(PerguntaPage, {
       dificuldade: dificuldade
