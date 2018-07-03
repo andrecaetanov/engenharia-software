@@ -3,4 +3,15 @@ page-instrucoes {
     color: #ffffff;
     margin-top: 0;
   }
+
+  .botao-instrucoes {
+    margin-bottom: 10%;
+    width: 100px;
+    margin-left: calc(50% - 50px);
+    color: #ffffff;
+  }
+
+  ion-slides {
+    height: 80%
+  }
 }
