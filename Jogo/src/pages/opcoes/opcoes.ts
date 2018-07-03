@@ -1,6 +1,7 @@
 import { MenuPrincipalPage } from './../menu-principal/menu-principal';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NativeAudio } from '@ionic-native/native-audio';
 
 /**
  * Generated class for the SelecionarDificuldadePage page.
@@ -16,12 +17,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class OpcoesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,  private nativeAudio: NativeAudio) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad OpcoesPage');
   }
+
+
 
   retornarParaMenu() {
     this.navCtrl.push(MenuPrincipalPage);

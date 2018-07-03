@@ -24,6 +24,7 @@ export class MenuPrincipalPage {
 
   acessarPaginaSelecionarDificuldade() {
     this.navCtrl.push(SelecionarDificuldadePage);
+    this.nativeAudio.stop('theme-song');
   }
 
   acessarPaginaInstrucoes() {
